@@ -18,10 +18,15 @@
   round-mode          = places,
   round-precision     = 4,
 }
+\title{Misura di Indici di Rifrazione}
+\author{Bernardo Tomelleri, Marco Romagnoli}
+\date{21/02/2019}
+
 \pagestyle{fancy}
 \begin{document}
 \begin{titlepage}
 	\begin{center}
+		{\huge{Laboratorio di Fisica I}}\\\vspace*{7mm} %esempio: Laboratorio I, II o III
 		{\huge{\textbf{\thetitle}}}\\\vspace*{15mm}
 		\begin{tabular}{ll}
 		& Bernardo Tomelleri (587829) \\
@@ -35,6 +40,12 @@
 \makeatother
 \restoregeometry
 \newpage
+
+\tableofcontents
+
+\vspace{2cm}
+
+\emergencystretch = 22 pt
 \section{Scopo dell'esperienza}
 L'obiettivo dell'esperienza consiste nella misura degli indici di rifrazione del plexiglass e dell'acqua.
 
@@ -69,26 +80,26 @@ L'obiettivo dell'esperienza consiste nella misura degli indici di rifrazione del
     \draw (\xc+\rthetab, \yc-\r) arc (0:\thetain:\rthetab);
     \draw (\xc-\rthetab, \yc-\r) arc (180:180+\thetarif:\rthetab);
     \node at (\xc+2*\rthetab*cos{\thetain},%
-    \yc-\r+2*\rthetab*sin{\thetain/2}) {$\Theta_{\rm i}$};
+    \yc-\r+2*\rthetab*sin{\thetain/2}) {$\theta_{\rm i}$};
     \node at (\xc-2*\rthetab*cos{\thetarif},%
-    \yc-\r-2*\rthetab*sin{\thetarif/2}) {$\Theta_{\rm r}$};
+    \yc-\r-2*\rthetab*sin{\thetarif/2}) {$\theta_{\rm r}$};
     \node at (\xc+2*\rthetaa, \yc-1.5*\r) {$n_1 \sim 1$};
     \node at (\xc-1.25*\rthetaa, \yc-1.5*\r) {$n_2$};
   \end{tikzpicture}
  \caption{Schematizzazione dell'apparato per la misura dell'indice di
     rifrazione del plexiglass.
-    L'angolo di incidenza $\Theta_{\rm i}$ (di rifrazione $\Theta_{\rm r}$)
+    L'angolo di incidenza $\theta_{\rm i}$ (di rifrazione $\theta_{\rm r}$)
     \`e l'angolo formato dal raggio luminoso incidente (rifratto) con la
     normale alla superficie di separazione tra i due mezzi.}
  \label{fig:plexiglass}
 \end{figure}
 \noindent
-Quando un raggio di luce passa da un mezzo con indice di rifrazione $n_1$ ad un altro con indice di rifrazione $n_2$, gli angoli di rifrazione $\Theta_i$ e incidenza $\Theta_{\rm r}$ sono legati tra loro dalla legge di Snell - Cartesio:
+Quando un raggio di luce passa da un mezzo con indice di rifrazione $n_1$ ad un altro con indice di rifrazione $n_2$, gli angoli di rifrazione $\theta_i$ e incidenza $\theta_{\rm r}$ sono legati tra loro dalla legge di Snell - Cartesio:
 \begin{equation}\label{eq:Snell}
-  n_1 \sin\Theta_{\rm i} = n_2\sin\Theta_{\rm r}.
+  n_1 \sin\theta_{\rm i} = n_2\sin\theta_{\rm r}.
 \end{equation}
-Assumendo come indice di rifrazione dell'aria, con buona approssimazione, $n_1 \sim 1$.
-è possibile ricavare l'indice di rifrazione del plexiglass dal rapporto $n_2 = \frac{\Theta_{\rm i}}{\Theta_{\rm r}}$
+Assumendo come indice di rifrazione dell'aria, con buona approssimazione, $n_1 \sim 1$
+è possibile ricavare l'indice di rifrazione del plexiglass dal rapporto $n_2 = \frac{\sin{\theta_{\rm i}}}{\sin{\theta_{\rm r}}}$
 
 \subsection*{Indice di rifrazione dell'acqua}
 \begin{figure}[!htb]\centering
@@ -122,19 +133,19 @@ Con riferimento alla figura~\ref{fig:acqua}: siano $r$ il raggio del diottro, $p
 \noindent
 Avendo assunto come indice di rifrazione dell'aria $n_1 \sim 1$, risulta chiaro, invertendo \eqref{eq:diottro} per $\frac{1}{q}$, come nel grafico cartesiano ($1/p_i$, $1/q_i)$ il coefficiente angolare debba corrispondere all'indice di rifrazione dell'acqua $-n_2$. 
 \begin{equation}\label{eq:fit_w}
-  \frac{1}{q} = -\frac{n_2}{p} + \frac{(n_2 - 1)}{r}.
+  \frac{1}{q} = -\frac{n_2}{p} + \frac{(n_2 - 1)}{r} = -n_2 \left(\frac{1}{p} - \frac{1}{r}\right) - \frac{1}{r}.
 \end{equation}
 Per lo stesso motivo, dal valore dell'intercetta $b$, è possibile ottenere una stima del raggio $r =\frac{n_2 - 1}{b}$ del diottro.
 
 \section{Descrizione delle Misure}
 \subsection*{Indice di rifrazione del plexiglass}
-Si sono montati sul banco ottico un diaframma a fenditura e una lente convergente davanti alla sorgente luminosa per ottenere un fascio sottile di luce da misurare. Si \`e quindi posizionato il semicilindro di plexiglass sul piatto girevole, di modo che il centro della superficie fosse illuminato dal raggio, onde evitare ulteriori rifrazioni in uscita. Dunque abbiamo misurato $10$ coppie di valori $\sin\Theta_{\rm i}$, $sin\Theta_{\rm r}$ alterando l'angolo di incidenza ruotando la piattaforma.
+Si sono montati sul banco ottico un diaframma a fenditura e una lente convergente davanti alla sorgente luminosa per ottenere un fascio sottile di luce da misurare. Si \`e quindi posizionato il semicilindro di plexiglass sul piatto girevole, di modo che il centro della superficie fosse illuminato dal raggio, onde evitare ulteriori rifrazioni in uscita. Dunque abbiamo misurato $10$ coppie di valori $\sin\theta_{\rm i}$, $sin\theta_{\rm r}$ alterando l'angolo di incidenza ruotando la piattaforma.
 
 \begin{table}[H]
   \begin{center}
 	\begin{tabular}{cc}
 	\toprule
-	$\sin\Theta_{\rm i} \, [\si{\cm}]$ & $\sin\Theta_{\rm r} \, [\si{\cm}]$ \\
+	$\sin\theta_{\rm i} \, [\si{\cm}]$ & $\sin\theta_{\rm r} \, [\si{\cm}]$ \\
 	\midrule
 	\midrule
 	0.5	&	0.8	\\
@@ -150,7 +161,7 @@ Si sono montati sul banco ottico un diaframma a fenditura e una lente convergent
 	\bottomrule
 	\end{tabular}
   \end{center}
-  \caption{Le misure di incertezza per $\sin\Theta_{\rm i}$ e $\sin\Theta_{\rm r}$ corrispondono alla risoluzione del metro a nastro =  $1 \, \si{\mm}$ \label{tab:plex}}
+  \caption{Le misure di incertezza per $\sin\theta_{\rm i}$ e $\sin\theta_{\rm r}$ corrispondono alla risoluzione del metro a nastro =  $1 \, \si{\mm}$ \label{tab:plex}}
 \end{table}
 
 \subsection*{Indice di rifrazione dell'acqua}
@@ -184,24 +195,24 @@ Dal momento che le incertezze sulle misure lungo le ascisse e le ordinate sono u
 \begin{equation*}
 \sigma_{\rm eff} = \sqrt{\left|\frac{dy}{dx}\right|\sigma_{x_i}^2 + \sigma_{y_i}^2}
 \end{equation*}
-come già visto nella misura dell'indice di rifrazione del Plexiglass, minimizzando 
+minimizzando un chi quadro che tenga conto di entrambi gli errori:
 \begin{equation}\label{eq:chi_eff}
-\chi^2 = \sum_{i=1}^{n} \frac{(y_i-mx_i)^2}{\sigma_{y_i}^2 + m\sigma_{x_i}^2}
+\chi^2 = \sum_{i=1}^{n} \frac{(y_i-mx_i)^2}{\sigma_{\rm eff}^2}
 \end{equation}
-fino a quando l'errore su $x$ sarà trascurabile rispetto a $\sigma_{\rm eff}$.
-Si sono riportate le coppie di valori dei seni degli angoli di incidenza e rifrazione nel seguente grafico di $\sin\Theta_{\rm i}$ in funzione di $\sin\Theta_{\rm r}$:
+fino a quando l'incertezza su $x$ sarà trascurabile rispetto a $\sigma_{\rm eff}$.
+Si sono riportate le coppie di valori dei seni degli angoli di incidenza e rifrazione nel seguente grafico di $\sin\theta_{\rm i}$ in funzione di $\sin\theta_{\rm r}$:
 \begin{figure}[!htb]
   \centering
     \scalebox{0.8}{\input{./figs/plex_snell.pgf}}
-  \caption{Grafico di $\sin\Theta_{\rm i}$ in funzione di $\sin\Theta_{\rm r}$\label{graph: plex}}
+  \caption{Grafico di $\sin\theta_{\rm i}$ in funzione di $\sin\theta_{\rm r}$\label{graph: plex}}
 \end{figure}
-Avendo assunto come indice di rifrazione dell'aria $n_1 \sim 1$, da un fit per una legge lineare $$y=mx + b$$ con intercetta lasciata come parametro libero si ricavano i seguenti valori:
+Avendo assunto come indice di rifrazione dell'aria $n_1 \sim 1$, da un fit per una legge lineare $$y= mx + b$$ con intercetta lasciata come parametro libero si ricavano i seguenti valori:
 \begin{align*}
 m &= 1.47 \pm 0.07 \\
 b &= 0.06 \pm 0.11 \; \sim 0 \\
 \chi^2 &= 5.7/8
 \end{align*}
-Imponendo intercetta nulla, come previsto da \eqref{eq:Snell} si ottiene come coefficiente angolare della retta di\emph{best fit}:
+Imponendo intercetta nulla, come previsto da \eqref{eq:Snell} si ottiene come coefficiente angolare della retta di \emph{best fit}:
 \begin{align*}
 n &= 1.50 \pm 0.03 \\
 \chi^2 &= 6/9
@@ -231,7 +242,7 @@ da misurare e quanto trovato nelle nostre misure:
 \begin{center}
 \begin{tabular}{lccccccl}
 \midrule
-Materiale & & $n$ & & & & & \\
+Materiale & & $E[n]$ & & & & $n$ & \\
 \midrule
 \midrule
 Plexiglass & & $1.49$ & & & &$1.50 \pm 0.03 $& $\chi_{rid}^2 = 0.67$\\

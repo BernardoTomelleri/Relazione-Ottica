@@ -1,4 +1,4 @@
-\documentclass{report}[a4paper,11pt]
+\documentclass{article}[a4paper,11pt]
 \usepackage{standalone}
 \usepackage{amsmath}
 \usepackage{fancyhdr}
@@ -50,31 +50,35 @@
 \vspace{2cm}
 
 \emergencystretch = 22 pt
-
-\chapter{Arcobaleno e Indice di rifrazione dell'Acqua}
+\section{Arcobaleno e Indice di rifrazione dell'Acqua}
 
 \section{Strumentazione}
 La strumentazione utilizzata si limita a una fotografia digitale ad alta risoluzione del fenomeno trattato e di un software di elaborazione immagini dotato di uno strumento per campionare diversi punti e le loro coordinate bidimensionali in pixel.
-
-\begin{figure}[h!]
+\begin{figure}[htb!]
   \begin{center}
-    \includegraphics[width=\textwidth]{./figs/double-rainbow.jpg}
+    \includegraphics[width=\linewidth]{./figs/double-rainbow.jpg}
   \end{center}
   \caption{La fotografia campionata di un doppio arcobaleno}
 \end{figure}
 
 \section{Cenni Teorici}
 \subsection{Deflessione nel caso di Luce incidente su una goccia d'acqua}
-Si consideri un fascio di luce che illumina una sfera trasparente di raggio R e con indice di rifrazione n: i raggi luminosi sono rifratti e possono subire molteplici riflessioni all'interno della sfera prima di uscirne.
-Se il raggio subisce k riflessioni interne prima di uscire dalla sfera, la deflessione totale risulta pari a $\theta = 2(i-r) + k (\pi - 2r)$ \\
-Ovviamente si ha sempre:
-$$b = \sin i = n \sin r \;\;\;(legge\: di\: Snell - Cartesio)$$
-Ma in questo caso esistono punti critici in cui $\frac{d\theta}{db}$ si annulla. Per determinare gli angoli d'incidenza critici e i valori numerici della deflessione in funzione del numero $k$ e dell'indice di rifrazione $n$ abbiamo sfruttato la formula:
-$$ \iota = \arccos\sqrt{\frac{n^2-1}{k(k+2)}} $$
-Da cui, assumendo $n \approx \frac{4}{3}$, otteniamo $\iota_1 \approx 60^\circ$ e $\iota_2 \approx 72^\circ$ per valori di $k$ rispettivamente pari a 1 e 2.
+Si consideri un fascio di luce che illumina una goccia d'acqua -perfettamente- sferica di raggio $R$ e con indice di rifrazione $n$: i raggi luminosi che incidono sulla sua superficie vengono rifratti e possono subire molteplici riflessioni all'interno di questa prima di uscirne.
+Dunque chiamiamo angolo di \emph{diffusione} $\delta$ quello tra il raggio luminoso in entrata e il raggio in uscita. 
+Se il raggio di luce subisce $k$ riflessioni interne prima di uscire dalla sfera, la deflessione totale risulta pari a \begin{equation}\label{eq: k_defl}
+\delta = 2(i-r) + k (\pi - 2r)
+\end{equation}
+Per la legge di \emph{Snell-Cartesio} si ha sempre:
+\begin{equation}
+b = \sin{i} = n \sin{r}
+\end{equation}
+In questo caso esistono punti critici in cui $\frac{d\delta}{db}$ si annulla. Per determinare gli angoli d'incidenza critici e i valori numerici della deflessione in funzione del numero $k$ e dell'indice di rifrazione $n$ abbiamo sfruttato la formula:
+\begin{equation}\label{eq:crit}
+\iota = \arccos\sqrt{\frac{n^2-1}{k(k+2)}}
+\end{equation} 
+Da cui, assumendo $n \approx \frac{4}{3}$, otteniamo $\iota_1 \approx 60^\circ$ e $\iota_2 \approx 72^\circ$ per valori di $k$ rispettivamente pari a $1$ e $2$.
 \section{Descrizione delle Misure}
-Sono state effettuate 3 coppie di campionamenti per ottenere 3 fit circolari indipendenti e, di conseguenza, tre stime indipendenti del raggio rendendo possibile una stima sull'incertezza del valore medio.
-
+Abbiamo effettuato $3$ coppie di campionamenti per ottenere $3$ fit circolari indipendenti e, di conseguenza, tre stime del raggio $R$ così da avere una stima sull'incertezza dalla deviazione dal valore medio.
 \begin{table}[!htb]
   \begin{center}
   \begin{large}
@@ -111,9 +115,10 @@ Sono state effettuate 3 coppie di campionamenti per ottenere 3 fit circolari ind
 \end{table}
 
 \section{Analisi dei Dati}
-
-L'indice di rifrazione $n$ dell'acqua si ricava dalla seguente espressione: 
-$$\frac{\pi + 2\arcsin\left(\frac{\sqrt{9-x^2}}{2\sqrt{2}}\right) - 6\arcsin\left(\frac{\sqrt{9-x^2}}{2\sqrt{2}x}\right)}{4\arcsin\left(\frac{\sqrt{4-x^2}}{x\sqrt{3}}\right) - 2\arcsin\left(\frac{\sqrt{4-x^2}}{\sqrt{3}}\right)} -1.213 = 0$$
+L'indice di rifrazione $n$ dell'acqua si ricava dalla seguente espressione:
+\begin{equation}\label{eq: radii}
+\frac{\pi + 2\arcsin\left(\frac{\sqrt{9-x^2}}{2\sqrt{2}}\right) - 6\arcsin\left(\frac{\sqrt{9-x^2}}{2\sqrt{2}x}\right)}{4\arcsin\left(\frac{\sqrt{4-x^2}}{x\sqrt{3}}\right) - 2\arcsin\left(\frac{\sqrt{4-x^2}}{\sqrt{3}}\right)} -1.213 = 0
+\end{equation}
 \begin{figure}[H]
   \begin{center}
     \includegraphics[width=\textwidth]{./figs/wolfram.png}
@@ -121,41 +126,39 @@ $$\frac{\pi + 2\arcsin\left(\frac{\sqrt{9-x^2}}{2\sqrt{2}}\right) - 6\arcsin\lef
   \caption{Soluzione grafica ottenuta da Wolfram Alpha \cite{wolfram}}
 \end{figure}
 Da cui $n$ risulta pari a $1.3333 \pm 0.0005 $ come ci aspettavamo dalla teoria.
-
-\chapter{Alone Lunare e Misura dell'indice di rifrazione del Ghiaccio}
+\section{Alone Lunare e Misura dell'indice di rifrazione del Ghiaccio}
 
 \section{Strumentazione}
-La strumentazione utilizzata si limita a una fotografia digitale ad alta risoluzione del fenomeno trattato e di un software di elaborazione immagini dotato di uno strumento per campionare diversi punti e le loro coordinate bidimensionali in pixel.
-
+La strumentazione utilizzata si limita a una fotografia digitale del fenomeno trattato e di un software di elaborazione immagini dotato di uno strumento per campionare diversi punti e le loro coordinate bidimensionali in pixel.
 \section{Cenni Teorici}
 Talvolta intorno alla Luna e al Sole \`e possibile osservare aloni circolari.
-\begin{figure}[h!]
-  \begin{center}
-    \includegraphics[width=\textwidth]{./figs/lunar-halo.jpg}
-  \end{center}
-  \caption{La fotografia campionata del fenomeno}
+\begin{figure}[htb!]
+  \centering
+    \includegraphics[width=\linewidth]{./figs/lunar-halo.jpg}
+  \caption{La fotografia del fenomeno usata per i campionamenti}
 \end{figure}
-
 Si osservi l'alone che circonda la Luna, l'allineamento lungo l'eclittica di Venere, Luna, Marte e Giove, e le tre stelle che fanno da sfondo al fenomeno: Spica (la pi\`u luminosa della Vergine), Arcturus e Regolus.
 
 \section{Cenni Teorici}
 L'alone \`e dovuto alla deflessione della Luce da parte di piccoli prismi esagonali (vapore acqueo ghiacciato presente nell'atmosfera). 
-L'angolo minimo di deflessione $\delta_m$ della luce da parte di un prisma (con angolo al vertice $\phi = 60^\circ$ e costituito di materiale con indice di rifrazione $n$) sono legati dalla relazione:
+L'angolo minimo di deflessione $\delta_m$ della luce da parte di un prisma (con angolo al vertice $\phi = 60^\circ$ costituito di materiale con indice di rifrazione $n$) sono legati dalla relazione:
 \begin{equation}\label{eq:prism}
 n = \frac{\sin\left(\frac{\delta_m + \phi}{2}\right)}{\sin (\phi/2)}
 \end{equation} 
 In certe circostanze \`e visibile anche un secondo alone a $46^\circ$
 \subsection*{Legge di Gladstone-Dale}
-Sappiamo che gli indici di rifrazione di un mezzo in due diverse fasi di stato sono legate dalle loro densità secondo la Legge di Gladstone-Dale:
+Sappiamo che gli indici di rifrazione di un mezzo in due diverse fasi di stato sono legati dalle loro densità $\rho$ secondo la Legge di Gladstone-Dale:
 \begin{equation}\label{eq:Glad}
 (n-1) = k \rho
 \end{equation}
 Visto che le misure di indici proposte sono proprio dello stesso materiale nella sua fase solida e liquida può essere interessante verificare l'accordo di quest'ultima legge con i risultati sperimentali.
 \section{Descrizione delle Misure}
-La seguente tabella riporta i valori, in pixel, rilevati dai 4 campionamenti effettuati, anche stavolta per ottenere 3 fit circolari indipendenti e 4 diverse misure del raggio da cui stimare la deviazione dal valore medio.
-
-\begin{table}[h!]
+La seguente tabella riporta i valori, in pixel, rilevati dai $4$ campionamenti effettuati, anche stavolta per ottenere $4$ fit circolari indipendenti e $4$ diverse misure del raggio da cui stimare la deviazione dal valore medio.
+\begin{table}[htb!]
   \begin{center}
+  \begin{large}
+  Alone Lunare
+  \end{large}\\
 	\begin{tabular}{cccccccc}
 	\toprule
 	$x_{(1)}$  & $y_{(1)}$  & $x_{(2)}$  & $y_{(2)}$  & $x_{(3)}$  & $y_{(3)}$ & $x_{(4)}$  & $y_{(4)}$ \\
@@ -183,15 +186,17 @@ La seguente tabella riporta i valori, in pixel, rilevati dai 4 campionamenti eff
 	\bottomrule
 	\end{tabular}
   \end{center}
-  \caption{Coordinate in pixel dei punti campionati sull'immagine}
+  \caption{Coordinate in pixel dei punti campionati sull'immagine dell'alone.}
 \end{table}
 
 \section{Analisi dei Dati}
-Eseguendo un fit circolare all'alone, si determina il raggio in pixel che successivamente si pu\`o esprimere in gradi. Il fattore di conversione da pixel a gradi, (calibrazione) si determina consultando un catalogo stellare: \cite{stellarium} in cui siano riportate le coordinate delle tre stelle e tenendo conto che la distanza angolare tra una coppia di punti di coordinate sferiche ($\theta_1,\phi_1$) e ($\theta_2,\phi_2$) \`e data da:
-$$\cos\alpha = \sin\theta_1\sin\theta_2 + \cos\theta_1\cos\theta_2 \: (\cos\phi_1 - \cos\phi_2)$$
+Eseguendo un \emph{fit circolare} all'alone, si determina il raggio in pixel che successivamente si pu\`o esprimere in gradi. Il fattore di conversione da pixel a gradi, (calibrazione) si determina consultando un catalogo stellare: \cite{stellarium} in cui siano riportate le coordinate delle tre stelle e tenendo conto che la distanza angolare tra una coppia di punti di coordinate sferiche ($\theta_1,\phi_1$) e ($\theta_2,\phi_2$) \`e data da:
+\begin{equation}\label{eq: sphere}
+\cos\alpha = \sin\theta_1\sin\theta_2 + \cos\theta_1\cos\theta_2 \: (\cos\phi_1 - \cos\phi_2)
+\end{equation}
 dove $\theta$ \`e l'angolo polare e $\phi$ \`e quello azimutale.
-Una volta determinato il raggio angolare dell'alone ($\approx 22^\circ$) si pu\`o ipotizzare che questo sia dovuto alla presenza nell'atmosfera di prismi esagonali di ghiaccio orientati a caso. Dunque è possibile stimare l'indice di rifrazione del ghiaccio dall'ampiezza dell'alone, questo coincide infatti con l'angolo $\delta_m$ di deflessione dovuto ai prismi di ghiaccio. Da \eqref{eq:prism} si ricava la nostra misura dell'indice di rifrazione del ghiaccio:
-\begin{equation}
+Una volta determinato il raggio angolare dell'alone ($\approx 22^\circ$) si pu\`o ipotizzare che questo sia dovuto alla presenza nell'atmosfera di prismi esagonali di ghiaccio orientati a caso. Dunque è possibile stimare l'indice di rifrazione del ghiaccio dall'ampiezza angolare dell'alone. Questa coincide infatti con l'angolo $\delta_m$ di deflessione dovuto ai prismi di ghiaccio. Da \eqref{eq:prism} si ricava la nostra misura dell'indice di rifrazione del ghiaccio:
+\begin{equation}\label{eq: refr_ice}
 n = 2 \sin{\left(\frac{22^\circ + 60^\circ}{2}\right)} = 1.310 \pm 0.004
 \end{equation}
 
