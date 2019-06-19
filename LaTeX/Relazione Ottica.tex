@@ -1,0 +1,324 @@
+\documentclass{report}[a4paper,11pt]
+\usepackage{standalone}
+\usepackage{amsmath}
+\usepackage{relsize}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.markings}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{pgfplots}
+\usepackage{titling}
+\usepackage[italian]{babel}
+% Draw an arc denoting an angle using start and delta angles
+\newcommand{\drawarcdelta}[4]{
+  \draw ($#1+(#2:#4)$) arc[start angle=#2, delta angle=#3, radius=#4];
+}
+% Draw an arc with label denoting an angle using start and delta angles
+\newcommand{\drawlabeledarcdelta}[6]{
+  \drawarcdelta{#1}{#2}{#3}{#4}
+  \node at ($#1+(#2+#3/2:#6)$) {#5};
+}
+\sisetup{
+  round-mode          = places,
+  round-precision     = 5,
+}
+\geometry{a4paper, left=30mm, right=30mm, top=30mm, bottom=30mm}
+\title{Relazione finale Ottica}
+\author{Bernardo Tomelleri, Marco Romagnoli}
+\date{19/04/2019}
+
+\pagestyle{fancy}
+\lfoot{Università di Pisa}
+\rfoot{Relazione finale di ottica} 
+\headheight 22.6 pt
+\begin{document}
+\begin{titlepage}
+	\begin{center}
+		{\huge{Laboratorio di Fisica I}}\\\vspace*{7mm}
+		{\huge{\textbf{\thetitle}}}\\\vspace*{15mm}
+		\begin{tabular}{ll}
+		& Bernardo Tomelleri ($587829$) \\
+		& b.tomelleri@studenti.unipi.it\\ \\
+		& Marco Romagnoli ($578061$) \\
+		& m.romagnoli@studenti.unipi.it \\ \\
+		\end{tabular}\\\vspace*{5mm}
+		{\thedate}
+	\end{center}
+\end{titlepage}
+\makeatother
+\restoregeometry
+\newpage
+
+\tableofcontents
+
+\vspace{2cm}
+\emergencystretch = 22 pt
+
+\chapter{Arcobaleno e Indice di rifrazione dell'Acqua}
+\section{Scopo dell'esperienza}
+Studiare il fenomeno dell'arcobaleno dal punto di vista dell'ottica geometrica, dunque ottenere una misura dell'indice di rifrazione dell'acqua da quanto trovato.
+\section{Apparato sperimentale e strumenti}
+La strumentazione utilizzata si limita a una fotografia digitale ad alta risoluzione del fenomeno trattato e di un software di elaborazione immagini\footnote{Nel nostro caso GIMP\cite{gimp}} dotato di uno strumento per campionare punti e distanze tra questi, in base alle proprie coordinate in pixel.
+\begin{figure}[htb!]
+  \begin{center}
+    \includegraphics[width=\linewidth]{./figs/double-rainbow.jpg}
+  \end{center}
+  \caption{La fotografia campionata di un doppio arcobaleno}
+\end{figure}
+
+\section{Cenni Teorici}
+Sappiamo di poter osservare l'arcobaleno guardando un banco di pioggia quando il sole alle nostre spalle non è alla sua massima altezza, la spiegazione del fenomeno è da ricercarsi in ciò che succede al livello microscopico nelle singole gocce d'acqua:
+\subsection{Deflessione nel caso di Luce incidente su una goccia d'acqua}
+Si consideri un fascio di luce che illumina una goccia d'acqua -perfettamente- sferica di raggio $R$ e con indice di rifrazione $n$: i raggi luminosi che incidono sulla sua superficie ad un angolo $i$ vengono rifratti in entrata e possono subire molteplici riflessioni all'interno di questa prima di uscirne nuovamente rifratti.
+Dunque chiamiamo angolo di \emph{diffusione} $\delta$ quello tra il raggio luminoso in entrata e il raggio in uscita. 
+Se il raggio di luce subisce $k$ riflessioni interne prima di uscire dalla sfera, la deflessione totale risulta pari a \begin{equation}\label{eq: k_defl}
+\delta = 2(i-r) + k (\pi - 2r)
+\end{equation}
+Per la legge di \emph{Snell-Cartesio} si ha sempre:
+\begin{equation}\label{eq:snell}
+b = \sin{i} = n \sin{r}
+\end{equation}
+Dal sistema formato dalle equazioni \eqref{eq:snell} e \eqref{eq: k_defl} si ottiene l'espressione per l'angolo di deflessione
+\begin{equation}\label{eq: defl(iota)}
+\delta(i) = 2\left( 2\arcsin \left(\frac{\sin(i)}{n} - i\right)\right)
+\end{equation}
+Quando il raggio subisce almeno una riflessione interna $(k\geq 1)$ esistono punti critici in cui $\mathlarger{\frac{d\delta}{db}}$ si annulla. Per determinare gli angoli d'incidenza critici e i valori numerici della deflessione in funzione dei valori di $k$ e di $n$ abbiamo sfruttato la formula:
+\begin{equation}\label{eq:crit}
+i_k = \arccos\sqrt{\frac{n^2-1}{k(k+2)}}
+\end{equation} 
+Da cui, assumendo $n \approx \frac{4}{3}$, otteniamo:
+\begin{align*}
+i_1 &\approx 60 \si{\degree}\\
+i_2 &\approx 72 \si{\degree}\\
+\end{align*}
+La separazione nei $7$ colori nell'arcobaleno è dovuta alla debole dipendenza dell'indice di rifrazione $n$ dalla lunghezza d'onda $\lambda$ della luce, per questo ogni componente del raggio viene rifratto in maniera leggermente diversa, come mostrato nella figura \ref{fig:internal_refl1}
+\begin{figure}[H]
+ \centering
+ \begin{tikzpicture}[xscale=-1,
+    ray/.style={decoration={markings,mark=at position .5 with {
+      \arrow[>=latex]{>}}},postaction=decorate}
+  ]
+  % Radius of raindrop
+  \pgfmathsetlengthmacro{\r}{2.6cm}
+  % Position where the incoming ray enters the raindrop, as a fraction of
+  % the height of the drop.  If 0., the ray will enter in the middle of the
+  % drop, if 1., the ray will enter at the top of the drop.
+  \pgfmathsetmacro{\f}{.7}
+  % Various radii for drawing angle arcs and labels
+  \pgfmathsetlengthmacro{\arcradius}{.8cm}
+  \pgfmathsetlengthmacro{\dotradius}{.6cm}
+  \pgfmathsetlengthmacro{\arclabelradius}{1cm}
+
+  % Calculation of the angle of incidence
+  \pgfmathsetmacro{\incidentangle}{asin(\f)}
+
+  % Coordinates of origin and point of entry
+  \coordinate (O) at (0, 0);
+  \coordinate (A) at (\incidentangle:\r);
+
+  % Draw the drop and the incoming ray, as well as the angle of incidence
+  \draw (O) circle (\r);
+  \draw[ray] (A  -| \r*1.8, 0) -- (A);
+  \draw[dashed, gray] (O) -- ($(O)!1.5!(A)$) node[pos=1.05] {$n$};
+  \drawarcdelta{(A)}{0}{\incidentangle}{\arcradius-1pt}
+  \drawlabeledarcdelta{(A)}{0}{\incidentangle}{\arcradius+1pt}
+    {$i$}{\arclabelradius}
+
+  % For each red and blue ray.  The index of refraction for red light is
+  % slightly exaggerated, it should be 1.33.
+  \foreach \index/\color in {1.32/red, 1.33/yellow, 1.34/blue} {
+    % Calculate angle of refraction
+    \pgfmathsetmacro{\refractedangle}{asin(sin(\incidentangle) / \index)}
+    % Calculate top angle (at O) in the triangle formed by O, the point of
+    % entry, and the point of internal reflection
+    \pgfmathsetmacro{\angleindrop}{180 - 2*\refractedangle}
+
+    % Coordinate of point of reflection
+    \coordinate (A') at (\incidentangle+\angleindrop:\r);
+    % Coordinate of point of exit
+    \coordinate (A'') at (\incidentangle+2*\angleindrop:\r);
+
+    \begin{scope}[opacity=.5, color=\color]
+      % Draw the light rays
+      \draw[ray] (A) -- (A');
+      \draw[ray] (A') -- (A'');
+      \draw[ray] (A'') -- ($(A'')+(2*\incidentangle+2*\angleindrop:2*\r*0.5)$);
+      % Draw the normal lines
+      \draw[dashed] (O) -- ($(O)!1.5!(A')$) node[pos=1.05] {$n$};
+      \draw[dashed] (O) -- ($(O)!1.5!(A'')$) node[pos=1.05] {$n$};
+      %\draw[dashed] (A) -- (A'') node[pos=1.05] {$n$};
+
+      % Draw the arcs and labels
+      \drawlabeledarcdelta{(A)}{\incidentangle+180}{-\refractedangle}
+        {\arcradius}{$r$}{\arclabelradius}
+      \drawlabeledarcdelta{(A')}{\incidentangle+\angleindrop+180}{\refractedangle}
+        {\arcradius}{$\frac{\delta}{2}$}{\arclabelradius}
+      \drawlabeledarcdelta{(A')}{\incidentangle+\angleindrop+180}{-\refractedangle}
+        {\arcradius}{$\frac{\delta}{2}$}{\arclabelradius}
+      \drawarcdelta{(A'')}{\incidentangle+2*\angleindrop+180}{\refractedangle}
+        {\arcradius}
+    \end{scope}
+    % Draw the arcs of the angles of the rays leaving the raindrop.  Note
+    % that the angles are identical to the original angle of incidence.
+    \drawarcdelta{(A'')}{\incidentangle+2*\angleindrop}{\incidentangle}
+      {\arcradius-1pt}
+    \drawarcdelta{(A'')}{\incidentangle+2*\angleindrop}{\incidentangle}
+      {\arcradius+1pt}
+  }
+  % Mark the center of the raindrop
+  \draw[fill] (O) circle (1pt);
+ \end{tikzpicture}
+ \caption{Illustrazione della singola riflessione all'interno di una goccia d'acqua: la differenza tra gli indici di rifrazione per i colori è lievemente esagerata per chiarezza ($\pm 1\% $)\label{fig:internal_refl1}}
+\end{figure}
+Un modello empirico di questa dipendenza è data dalla legge di Cauchy
+\begin{equation}\label{eq:Cauchy}
+n(\lambda) = n_0 + \frac{A}{\lambda^2}+ \cdots
+\end{equation}
+dove $A$ prende il nome di Coefficiente di Cauchy, è possibile darne una stima a partire dai valori di $n$ trovati distinguendo gli archi in base al colore delle bande.
+
+\section{Descrizione delle Misure}
+Abbiamo effettuato $3$ coppie di campionamenti per ottenere $3$ fit circolari indipendenti e, di conseguenza, tre stime del raggio $R$ così da avere una stima sull'incertezza dalla deviazione dal valore medio.
+\begin{table}[!htb]
+  \begin{center}
+  \begin{large}
+  Arcobaleno Primario  \qquad \qquad \qquad \space Arcobaleno Secondario
+  \end{large}\\
+	\begin{tabular}{cccccc|cccccc}
+	\toprule
+	$x_{(1)}$  & $y_{(1)}$  & $x_{(2)}$  & $y_{(2)}$  & $x_{(3)}$  & $y_{(3)}$  & $x_{(1)}$  & $y_{(1)}$  & $x_{(2)}$  & $y_{(2)}$  & $x_{(3)}$  & $y_{(3)}$  \\
+	\midrule
+	\midrule
+	230 & 620 & 240 & 720 & 240 & 700 & 144 & 700 & 141 & 687 & 138 & 662 \\ 
+	 
+	235 & 561 & 230 & 622 & 232 & 590 & 146 & 520 & 145 & 518 & 140 & 555 \\ 
+	 
+	274 & 437 & 243 & 515 & 301 & 589 & 181 & 405 & 186 & 393 & 212 & 341 \\ 
+	 
+	351 & 331 & 316 & 370 & 424 & 271 & 286 & 249 & 295 & 239 & 408 & 159 \\ 
+	 
+	489 & 236 & 453 & 254 & 580 & 210 & 476 & 129 & 489 & 121 & 611 & 97 \\ 
+	 
+	828 & 237 & 863 & 253 & 739 & 209 & 850 & 130 & 839 & 123 & 754 & 100 \\ 
+	 
+	968 & 331 & 1001 & 368 & 892 & 270 & 1033 & 248 & 1025 & 238 & 917 & 161 \\ 
+	 
+	1043 & 437 & 1073 & 512 & 1016 & 390 & 1139 & 404 & 1135 & 392 & 1108 & 342 \\ 
+	 
+	1083 & 561 & 1085 & 621 & 1085 & 589 & 1173 & 519 & 1170 & 512 & 1179 & 553 \\ 
+	 
+	1086 & 622 & 1075 & 703 & 1076 & 701 & 1170 & 702 & 1173 & 690 & 1177 & 663 \\ 
+	\bottomrule
+	\end{tabular}
+  \end{center}
+  \caption{Coordinate in pixel dei punti campionati sull'immagine}
+\end{table}
+
+\section{Analisi dei Dati}
+L'indice di rifrazione $n$ dell'acqua si ricava dalla seguente espressione:
+\begin{equation}\label{eq: radii}
+\frac{\pi + 2\arcsin\left(\frac{\sqrt{9-x^2}}{2\sqrt{2}}\right) - 6\arcsin\left(\frac{\sqrt{9-x^2}}{2\sqrt{2}x}\right)}{4\arcsin\left(\frac{\sqrt{4-x^2}}{x\sqrt{3}}\right) - 2\arcsin\left(\frac{\sqrt{4-x^2}}{\sqrt{3}}\right)} -1.213 = 0
+\end{equation}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth]{./figs/wolfram.png}
+  \end{center}
+  \caption{Soluzione grafica ottenuta da Wolfram Alpha \cite{wolfram}}
+\end{figure}
+Da cui $n$ risulta pari a $1.3333 \pm 0.0005 $ come ci aspettavamo dalla teoria.
+
+\chapter{Alone Lunare e Misura dell'indice di rifrazione del Ghiaccio}
+\section{Strumentazione}
+La strumentazione utilizzata si limita a una fotografia digitale del fenomeno trattato e di un software di elaborazione immagini\footnote{\cite{gimp}} dotato di uno strumento per campionare diversi punti e distanze tra questi, in base alle proprie coordinate in pixel.
+\section{Cenni Teorici}
+Talvolta intorno alla Luna e al Sole \`e possibile osservare aloni circolari.
+\begin{figure}[htb!]
+  \centering
+    \includegraphics[width=\linewidth]{./figs/lunar-halo.jpg}
+  \caption{La fotografia del fenomeno usata per i campionamenti}
+\end{figure}
+Si osservi l'alone che circonda la Luna, l'allineamento lungo l'eclittica di Venere, Luna, Marte e Giove, e le tre stelle che fanno da sfondo al fenomeno: Spica (la pi\`u luminosa della Vergine), Arcturus e Regulus.\\
+L'alone \`e dovuto alla deflessione della Luce da parte di piccoli prismi esagonali (vapore acqueo ghiacciato presente nell'atmosfera). 
+L'angolo minimo di deflessione $\delta_m$ della luce da parte di un prisma (con angolo al vertice $\phi = 60^\circ$ costituito di materiale con indice di rifrazione $n$) sono legati dalla relazione:
+\begin{equation}\label{eq:prism}
+n = \frac{\sin\left(\frac{\delta_m + \phi}{2}\right)}{\sin (\phi/2)}
+\end{equation} 
+In certe circostanze \`e visibile anche un secondo alone a $46^\circ$
+\subsection*{Legge di Gladstone-Dale}
+Sappiamo che gli indici di rifrazione di un mezzo in due diverse fasi di stato sono legati dalle loro densità $\rho$ secondo la Legge di Gladstone-Dale:
+\begin{equation}\label{eq:Glad}
+(n-1) = k \rho
+\end{equation}
+Visto che le misure di indici proposte sono proprio dello stesso materiale nella sua fase solida e liquida può essere interessante verificare l'accordo di quest'ultima legge con i risultati sperimentali.
+\section{Descrizione delle Misure}
+La seguente tabella riporta i valori, in pixel, rilevati dai $4$ campionamenti effettuati, anche stavolta per ottenere $4$ fit circolari indipendenti e $4$ diverse misure del raggio da cui stimare la deviazione dal valore medio.
+\begin{table}[htb!]
+  \begin{center}
+  \begin{large}
+  Alone Lunare
+  \end{large}\\
+	\begin{tabular}{cccccccc}
+	\toprule
+	$x_{(1)}$  & $y_{(1)}$  & $x_{(2)}$  & $y_{(2)}$  & $x_{(3)}$  & $y_{(3)}$ & $x_{(4)}$  & $y_{(4)}$ \\
+	\midrule
+	\midrule
+	562 & 191 & 487 & 235 & 506 & 222 & 612 & 185 \\
+	                                         
+	684 & 192 & 752 & 234 & 741 & 223 & 584 & 188 \\
+	                                         
+	445 & 298 & 437 & 316 & 432 & 327 & 559 & 197 \\
+	                                         
+	801 & 299 & 809 & 314 & 810 & 325 & 531 & 210 \\
+	                                         
+	427 & 372 & 429 & 380 & 427 & 388 & 497 & 232 \\
+	                                         
+	821 & 374 & 818 & 381 & 817 & 389 & 474 & 255 \\
+	                                         
+	453 & 479 & 487 & 518 & 488 & 470 & 442 & 307 \\
+	                                         
+	793 & 480 & 774 & 520 & 800 & 469 & 430 & 361 \\
+	                                         
+	518 & 551 & 553 & 571 & 511 & 542 & 437 & 429 \\
+	                                         
+	744 & 553 & 687 & 570 & 759 & 541 & 463 & 486 \\
+	\bottomrule
+	\end{tabular}
+  \end{center}
+  \caption{Coordinate in pixel dei punti campionati sull'immagine dell'alone.}
+\end{table}
+
+\section{Analisi dei Dati}
+Eseguendo un \emph{fit circolare} all'alone, si determina il raggio in pixel che successivamente si pu\`o esprimere in gradi. Il fattore di conversione da pixel a gradi, (calibrazione) si determina consultando un catalogo stellare: \cite{stellarium} in cui siano riportate le coordinate delle tre stelle e tenendo conto che la distanza angolare tra una coppia di punti di coordinate sferiche ($\theta_1,\phi_1$) e ($\theta_2,\phi_2$) \`e data da:
+\begin{equation}\label{eq: sphere}
+\cos\alpha = \sin\theta_1\sin\theta_2 + \cos\theta_1\cos\theta_2 \: (\cos\phi_1 - \cos\phi_2)
+\end{equation}
+dove $\theta$ \`e l'angolo polare e $\phi$ \`e quello azimutale.
+Una volta determinato il raggio angolare dell'alone ($\approx 22^\circ$) si pu\`o ipotizzare che questo sia dovuto alla presenza nell'atmosfera di prismi esagonali di ghiaccio orientati a caso. Dunque è possibile stimare l'indice di rifrazione del ghiaccio dall'ampiezza angolare dell'alone. Questa coincide infatti con l'angolo $\delta_m$ di deflessione dovuto ai prismi di ghiaccio. Da \eqref{eq:prism} si ricava la nostra misura dell'indice di rifrazione del ghiaccio:
+\begin{equation}\label{eq: refr_ice}
+n = 2 \sin{\left(\frac{22^\circ + 60^\circ}{2}\right)} = 1.310 \pm 0.004
+\end{equation}
+
+%\chapter{Esperienze di Laboratorio}
+%\title{Misura di Indici di Rifrazione}
+%\author{Bernardo Tomelleri, Marco Romagnoli}
+%\date{21/02/2019}
+%\input{Rifrazione.tex}
+
+%\title{Misura di Focali}
+%\author{Bernardo Tomelleri, Marco Romagnoli}
+%\date{21/03/2019}
+%\input{Focali.tex}
+
+\medskip
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}
