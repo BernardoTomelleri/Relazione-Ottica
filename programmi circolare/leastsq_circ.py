@@ -10,8 +10,11 @@ from matplotlib import pyplot as plt
 # Testo dei grafici in LaTeX (opzionale)
 plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
-# Definizione dati in ingresso
-x, y = np.loadtxt('./data/alone_rosso.txt', skiprows=1, unpack = True)
+# Definizione dati in ingresso e offset dallo 0 degli assi di GIMP
+rnbw_offset = 866
+halo_offset = 800
+x, y = np.loadtxt('./data/alone.txt', skiprows=1, unpack = True)
+y = halo_offset - y
 dy = np.full(len(y), 1.)
 
 def calc_R(x,y, xc, yc):
@@ -53,9 +56,9 @@ print('Chi quadro ridotto:', (chisq/ndof))
 # Grafici
 fig, (ax1, ax2) = plt.subplots(2,1, figsize=(8, 8), gridspec_kw={'wspace':0.08, 'hspace':0.08, 'height_ratios': [4, 1]})
 ax1.axis('equal',adjustable='datalim')
-ax1.set_title('Fit Alone Rosso')
+ax1.set_title('Fit Alone Verde')
 ax1.grid(color = 'gray', linestyle = '--', alpha=0.7)
-ax1.plot(x_fit, y_fit, 'r-' , label='modello')
+ax1.plot(x_fit, y_fit, 'g-', label='modello')
 ax1.plot([xc], [yc], 'k.', mec='y', mew=1)
 ax1.set_ylabel('y [pixel]')   
 ax1.xaxis.set_major_locator(plt.MultipleLocator(50.))
@@ -70,8 +73,8 @@ ax1.legend(loc='best',labelspacing=0.1 )
 # Residui
 ax2.set_xlabel('x')
 ax2.set_ylabel('y')
-ax2.plot(x, y*0, 'r')
-ax2.errorbar(x, resnorm, dy, dy, 'ko', markersize=2., linestyle='')
+ax2.plot(x, y*0, 'g')
+ax2.errorbar(x, resnorm, dy, dy, 'ko', markersize=2., elinewidth=1.2, capsize=2., linestyle='')
 ax2.grid(color ='gray', linestyle = '--', alpha = 0.7)
 ax2.set_xlabel('x [pixel]')
 ax2.set_ylabel('Residui [a.u.]')
