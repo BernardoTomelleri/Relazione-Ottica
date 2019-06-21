@@ -81,25 +81,40 @@ Sappiamo di poter osservare l'arcobaleno guardando un banco di pioggia quando il
 Si consideri un fascio di luce che illumina una goccia d'acqua -perfettamente- sferica di raggio $R$ e con indice di rifrazione $n$: i raggi luminosi che incidono sulla sua superficie ad un angolo $i$ vengono rifratti in entrata e possono subire molteplici riflessioni all'interno di questa prima di uscirne nuovamente rifratti.
 Dunque chiamiamo angolo di \emph{diffusione} $\delta$ quello tra il raggio luminoso in entrata e il raggio in uscita. 
 Se il raggio di luce subisce $k$ riflessioni interne prima di uscire dalla sfera, la deflessione totale risulta pari a \begin{equation}\label{eq: k_defl}
-\delta = 2(i-r) + k (\pi - 2r)
+\theta_k = 2(i-r) + k (\pi - 2r)
 \end{equation}
 Per la legge di \emph{Snell-Cartesio} si ha sempre:
 \begin{equation}\label{eq:snell}
 b = \sin{i} = n \sin{r}
 \end{equation}
-Dal sistema formato dalle equazioni \eqref{eq:snell} e \eqref{eq: k_defl} si ottiene l'espressione per l'angolo di deflessione
+Dal sistema formato dalle equazioni \eqref{eq:snell} e \eqref{eq: k_defl} si ottiene un'espressione in $i$ per l'angolo di diffusione $\delta_k = \pi - \theta_k$
 \begin{equation}\label{eq: defl(iota)}
-\delta(i) = 2\left( 2\arcsin \left(\frac{\sin(i)}{n} - i\right)\right)
+\delta_k(i) = 2\left( (k+1)\arcsin \left(\frac{\sin{i}}{n}\right) -i \right)
 \end{equation}
-Quando il raggio subisce almeno una riflessione interna $(k\geq 1)$ esistono punti critici in cui $\mathlarger{\frac{d\delta}{db}}$ si annulla. Per determinare gli angoli d'incidenza critici e i valori numerici della deflessione in funzione dei valori di $k$ e di $n$ abbiamo sfruttato la formula:
+Quando il raggio subisce almeno una riflessione interna $(k\geq 1)$ esistono punti critici in cui $\mathlarger{\frac{d\delta_k}{db}}$ si annulla, d'altro canto $n$ è costante, dunque la derivata dipende dal solo $i$
+\begin{equation}
+\frac{d \delta_k(i)}{d i} = 2 \left( \frac{(k+1) \cos{i}}{n \sqrt{1 - \left(\frac{\sin{i}}{n}\right)^2}} -1\right)
+\end{equation}
+Dunque un angolo d'incidenza critico è dato da $\hat{i}_k$:
+\begin{align}
+\delta_k'(\hat{i}_k) &= 2\left(\frac{(k+1) \cos{\hat{i}_k}}{\sqrt{n^2 - \sin^2{\hat{i}_k}}} - 1 \right) = 0 \\
+\sin{\hat{i}_k} &= \sqrt{\frac{(k+1)^2 - n^2}{k(k+2)}} \Rightarrow \hat{i}_k = \arcsin{\sqrt{\frac{(k+1)^2 - n^2}{k(k+2)}}}
+\end{align}
+grazie all'identità fondamentale della trigonometria si giustifica la formula fornita per gli angoli d'incidenza critici e i valori numerici della deflessione in funzione dei valori di $k$ e di $n$:
 \begin{equation}\label{eq:crit}
 i_k = \arccos\sqrt{\frac{n^2-1}{k(k+2)}}
-\end{equation} 
+\end{equation}
 Da cui, assumendo $n \approx \frac{4}{3}$, otteniamo:
 \begin{align*}
 i_1 &\approx 60 \si{\degree}\\
-i_2 &\approx 72 \si{\degree}\\
+i_2 &\approx 72 \si{\degree}
 \end{align*}
+Ossia i raggi luminosi che incidono sulla goccia ad angoli prossimi a $i_1$ e $i_2$ vengono concentrati nei rispettivi angoli di diffusione determinati da \eqref{eq: defl(iota)}
+\begin{align}
+\delta_1 = &\approx 42 \si{\degree}\\
+\delta_2 = &\approx 51 \si{\degree}\\
+\end{align}
+
 La separazione nei $7$ colori nell'arcobaleno è dovuta alla debole dipendenza dell'indice di rifrazione $n$ dalla lunghezza d'onda $\lambda$ della luce, per questo ogni componente del raggio viene rifratto in maniera leggermente diversa, come mostrato nella figura \ref{fig:internal_refl1}
 \begin{figure}[H]
  \centering
@@ -223,7 +238,11 @@ Abbiamo effettuato $3$ coppie di campionamenti per ottenere $3$ fit circolari in
 \end{table}
 
 \section{Analisi dei Dati}
-L'indice di rifrazione $n$ dell'acqua si ricava dalla seguente espressione:
+Dal momento che fra gli angoli di diffusione associati all’arcobaleno secondario e primario ed i rispettivi raggi sussiste la relazione:
+\begin{equation}\label{eq:ratio}
+\frac{\delta_2}{\delta_1} = \frac{R_2}{R_1}
+\end{equation}
+L'indice di rifrazione $n$ dell'acqua è vincolato a rispettare la seguente espressione:
 \begin{equation}\label{eq: radii}
 \frac{\pi + 2\arcsin\left(\frac{\sqrt{9-x^2}}{2\sqrt{2}}\right) - 6\arcsin\left(\frac{\sqrt{9-x^2}}{2\sqrt{2}x}\right)}{4\arcsin\left(\frac{\sqrt{4-x^2}}{x\sqrt{3}}\right) - 2\arcsin\left(\frac{\sqrt{4-x^2}}{\sqrt{3}}\right)} -1.213 = 0
 \end{equation}

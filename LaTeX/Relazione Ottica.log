@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.16)  19 JUN 2019 16:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.16)  21 JUN 2019 05:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1286,39 +1286,39 @@ Package pdftex.def Info: ./figs/double-rainbow.jpg  used on input line 73.
 (pdftex.def)             Requested size: 426.79135pt x 284.30594pt.
 [2
 
-] [3 <./figs/double-rainbow.jpg>] [4]
-<./figs/wolfram.png, id=119, 592.46344pt x 470.50781pt>
+] [3 <./figs/double-rainbow.jpg>]
+<./figs/wolfram.png, id=115, 592.46344pt x 470.50781pt>
 File: ./figs/wolfram.png Graphic file (type png)
 <use ./figs/wolfram.png>
-Package pdftex.def Info: ./figs/wolfram.png  used on input line 232.
+Package pdftex.def Info: ./figs/wolfram.png  used on input line 251.
 (pdftex.def)             Requested size: 426.79135pt x 338.95203pt.
- [5 <./figs/wolfram.png>]
+ [4] [5 <./figs/wolfram.png>]
 Capitolo 2.
-<./figs/lunar-halo.jpg, id=132, 1204.5pt x 803.0pt>
+<./figs/lunar-halo.jpg, id=140, 1204.5pt x 803.0pt>
 File: ./figs/lunar-halo.jpg Graphic file (type jpg)
 <use ./figs/lunar-halo.jpg>
-Package pdftex.def Info: ./figs/lunar-halo.jpg  used on input line 245.
+Package pdftex.def Info: ./figs/lunar-halo.jpg  used on input line 264.
 (pdftex.def)             Requested size: 426.79135pt x 284.534pt.
 [6
 
  <./figs/lunar-halo.jpg>] [7] (./Relazione Ottica.bbl [8]) [9
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 324.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 324.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
 
 (./Relazione Ottica.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 324.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 324.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
 Package rerunfilecheck Info: File `"Relazione Ottica".out' has not changed.
 (rerunfilecheck)             Checksum: 93D2F9232CEC92B54F68226EFD5ED937;878.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 324.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
  ) 
 Here is how much of TeX's memory you used:
- 42376 strings out of 492609
- 965970 string characters out of 6132818
- 1145132 words of memory out of 5000000
- 45666 multiletter control sequences out of 15000+600000
+ 42384 strings out of 492609
+ 966082 string characters out of 6132818
+ 1148131 words of memory out of 5000000
+ 45667 multiletter control sequences out of 15000+600000
  542154 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,13n,98p,929b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1337,10 +1337,10 @@ exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2019
 sfonts/cm/cmsl10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
 b><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "Relazione Ottica.pdf" (10 pages, 523757 bytes).
+Output written on "Relazione Ottica.pdf" (10 pages, 528895 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 200 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 500000)
+ 245 PDF objects out of 1000 (max. 8388607)
+ 209 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
  124 words of extra memory for PDF output out of 10000 (max. 10000000)
 
