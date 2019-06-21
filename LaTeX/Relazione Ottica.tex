@@ -111,8 +111,8 @@ i_2 &\approx 72 \si{\degree}
 \end{align*}
 Ossia i raggi luminosi che incidono sulla goccia ad angoli prossimi a $i_1$ e $i_2$ vengono concentrati nei rispettivi angoli di diffusione determinati da \eqref{eq: defl(iota)}
 \begin{align}
-\delta_1 = &\approx 42 \si{\degree}\\
-\delta_2 = &\approx 51 \si{\degree}\\
+\delta_1 &= 4 \arcsin{\sqrt{\frac{4 - n^2}{3n^2}}} -2 \arcsin{\sqrt{\frac{4 - n^2}{3}}} \approx 42 \si{\degree}\\
+\delta_2 &= \pi -6 \arcsin{\sqrt{\frac{9 - n^2}{8n^2}}} + 2\arcsin{\sqrt{\frac{9 - n^2}{8}}} \approx 51 \si{\degree}
 \end{align}
 \subsection{Dispersione ottica all'interno delle gocce}
 La separazione nei $7$ colori nell'arcobaleno è dovuta alla debole dipendenza dell'indice di rifrazione $n$ dalla lunghezza d'onda $\lambda$ della luce, per questo ogni componente del raggio viene rifratto in maniera leggermente diversa, come mostrato nella figura \ref{fig:internal_refl1}
@@ -234,13 +234,43 @@ Abbiamo effettuato $3$ coppie di campionamenti per ottenere $3$ fit circolari in
 	\bottomrule
 	\end{tabular}
   \end{center}
-  \caption{Coordinate in pixel dei punti campionati sull'immagine}
+  \caption{Coordinate in pixel dei punti campionati sull'immagine\label{tab:arcpoints}}
 \end{table}
 
 \section{Analisi dei Dati}
+Si sono effettuati $6$ fit circolari indipendenti, uno per ognuna delle $3$ bande di colore distinguibili all'interno dei due archi concentrici, di cui si riportano i risultati
+\begin{table}[!htb]
+  \begin{center}
+  \begin{large}
+  Arcobaleno Primario \qquad  Arcobaleno Secondario
+  \end{large}\\
+	\begin{tabular}{ccc|ccc}
+	\toprule
+	$r_{(rosso)}$  & $r_{(giallo)}$  & $r_{(blu)}$ & $R_{(blu)}$  & $R_{(giallo)}$  & $R_{(rosso)}$ \\
+	\midrule
+	\midrule
+	 430.1 & 429.1 & 427.5 & 521.7 & 520.6 & 518.8 \\ 
+%	Ascissa centro & 658.6 & 658.1 & 658.4 & 659.1 & 658.8 & 659.1 \\  
+%	Ordinata centro & 629.8 & 625.6 & 626.8 & 615.4 & 612.5 & 614.4 \\  
+	\bottomrule
+	\end{tabular}
+  \end{center}
+  \caption{Miglior stime dei raggi dell'arcobaleno ottenute dai fit\label{tab:arcfit}}
+\end{table}
+%Per completezza i valori ottenuti per le coordinate del centro sono compatibili e risultano
+%\begin{align}
+%x_c &= 568 \pm 2 \; [px] \qquad X_c = 569 \pm 2 \; [px] \\
+%y_c &=
+%\end{align}
+Da questi, prendendo come valore di riferimento la media e come incertezza associata lo scarto quadratico medio, si ottengono le nostre misure dei raggi e del loro rapporto:
+\begin{align}
+R &= 520 \pm 1 \; [\rm px] \\
+r &= 429 \pm 1 \; [\rm px] \\
+\frac{R}{r} &= 1.213 \pm 0.005
+\end{align}
 Dal momento che fra gli angoli di diffusione associati all’arcobaleno secondario e primario ed i rispettivi raggi sussiste la relazione:
 \begin{equation}\label{eq:ratio}
-\frac{\delta_2}{\delta_1} = \frac{R_2}{R_1}
+\frac{\delta_2}{\delta_1} = \frac{R}{r}
 \end{equation}
 L'indice di rifrazione $n$ dell'acqua è vincolato a rispettare la seguente espressione:
 \begin{equation}\label{eq: radii}
