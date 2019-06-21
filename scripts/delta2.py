@@ -14,12 +14,14 @@ def diffusion(x):
     return (np.pi - 6*np.arcsin(np.sin(x)/n) +2*x)*deg
 
 y=diffusion(x)
+plt.rc('text', usetex=True)
+plt.rc('font', family='serif')
 fig, ax = plt.subplots()
 ax.set_ylabel('Angolo di diffusione $\delta_2$ $[\deg]$')
-ax.set_xlabel(r'Angolo di incidenza $\i_2$ $[\deg]$', x=0.81)
+ax.set_xlabel(r'Angolo di incidenza $\i_2$ $[\deg]$', x=0.84)
 ax.grid(color = 'gray', linestyle = '--', alpha=0.7)
-ax.plot(x*deg, y, 'b-', label='$\delta_2$', zorder =10)
-ax.plot(1.253*deg, np.min(diffusion(x)),'ko', label='Minimo')
+ax.plot(x*deg, y, '-', label='$\delta_2$', zorder =10)
+ax.plot(1.253*deg, np.min(diffusion(x)),'o', ms=4., label='Minimo')
 ax.xaxis.set_major_locator(plt.MultipleLocator(10))
 ax.xaxis.set_minor_locator(plt.MultipleLocator(2))
 ax.yaxis.set_major_locator(plt.MultipleLocator(10))
