@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.16)  22 JUN 2019 02:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.16)  22 JUN 2019 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1060,20 +1060,20 @@ Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 (./Relazione Ottica.aux)
 \openout1 = `"Relazione Ottica.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 (c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1106,7 +1106,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box75
-Package hyperref Info: Link coloring OFF on input line 43.
+Package hyperref Info: Link coloring OFF on input line 44.
 
 (c:/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1116,9 +1116,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count340
 )
-LaTeX Info: Redefining \ref on input line 43.
-LaTeX Info: Redefining \pageref on input line 43.
-LaTeX Info: Redefining \nameref on input line 43.
+LaTeX Info: Redefining \ref on input line 44.
+LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \nameref on input line 44.
 
 (./Relazione Ottica.out) (./Relazione Ottica.out)
 \@outlinefile=\write4
@@ -1250,17 +1250,17 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 43.
+ on input line 44.
 
-LaTeX Info: Redefining \it@ocap on input line 43.
-LaTeX Info: Redefining \it@ccap on input line 43.
+LaTeX Info: Redefining \it@ocap on input line 44.
+LaTeX Info: Redefining \it@ccap on input line 44.
 
 File italian.ldf warning: 
 italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 43.
+italian.ldf    on input line 44.
 
 [1
 
@@ -1273,55 +1273,55 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66 \chapter
+l.63 \chapter
              {Arcobaleno e Indice di rifrazione dell'Acqua} [1
 
 
 ]
 Capitolo 1.
-<./figs/double-rainbow.jpg, id=92, 1304.875pt x 869.2475pt>
+<./figs/double-rainbow.jpg, id=97, 1304.875pt x 869.2475pt>
 File: ./figs/double-rainbow.jpg Graphic file (type jpg)
 <use ./figs/double-rainbow.jpg>
-Package pdftex.def Info: ./figs/double-rainbow.jpg  used on input line 73.
+Package pdftex.def Info: ./figs/double-rainbow.jpg  used on input line 70.
 (pdftex.def)             Requested size: 426.79135pt x 284.30594pt.
 [2
 
 ] [3 <./figs/double-rainbow.jpg>] [4]
-<./figs/wolfram.png, id=133, 592.46344pt x 470.50781pt>
+<./figs/wolfram.png, id=138, 592.46344pt x 470.50781pt>
 File: ./figs/wolfram.png Graphic file (type png)
 <use ./figs/wolfram.png>
-Package pdftex.def Info: ./figs/wolfram.png  used on input line 281.
+Package pdftex.def Info: ./figs/wolfram.png  used on input line 278.
 (pdftex.def)             Requested size: 426.79135pt x 338.95203pt.
  [5] [6 <./figs/wolfram.png>]
 Capitolo 2.
-<./figs/lunar-halo.jpg, id=159, 1204.5pt x 803.0pt>
+<./figs/lunar-halo.jpg, id=164, 1204.5pt x 803.0pt>
 File: ./figs/lunar-halo.jpg Graphic file (type jpg)
 <use ./figs/lunar-halo.jpg>
-Package pdftex.def Info: ./figs/lunar-halo.jpg  used on input line 295.
+Package pdftex.def Info: ./figs/lunar-halo.jpg  used on input line 292.
 (pdftex.def)             Requested size: 426.79135pt x 284.534pt.
 [7
 
- <./figs/lunar-halo.jpg>] [8] (./Relazione Ottica.bbl [9]) [10
+ <./figs/lunar-halo.jpg>] (./figs/delta_ice.pgf) [8] (./Relazione Ottica.bbl
+[9]) [10
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 374.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 374.
-
-(./Relazione Ottica.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 374.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 374.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 387.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 387.
+ (./Relazione Ottica.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 387.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 387.
 Package rerunfilecheck Info: File `"Relazione Ottica".out' has not changed.
-(rerunfilecheck)             Checksum: A8A615CA793B04800B6122BC682A1D24;1051.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 374.
+(rerunfilecheck)             Checksum: 1C02E569123637E28F44D58151353435;1128.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 387.
  ) 
 Here is how much of TeX's memory you used:
- 42395 strings out of 492609
- 966233 string characters out of 6132818
- 1149131 words of memory out of 5000000
- 45672 multiletter control sequences out of 15000+600000
+ 42418 strings out of 492609
+ 966633 string characters out of 6132818
+ 1157132 words of memory out of 5000000
+ 45688 multiletter control sequences out of 15000+600000
  542154 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,13n,98p,929b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,13n,98p,899b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2019
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2019/texmf-di
@@ -1337,10 +1337,10 @@ exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2019
 sfonts/cm/cmsl10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
 b><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "Relazione Ottica.pdf" (11 pages, 533398 bytes).
+Output written on "Relazione Ottica.pdf" (11 pages, 538917 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
- 140 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 273 PDF objects out of 1000 (max. 8388607)
+ 236 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
