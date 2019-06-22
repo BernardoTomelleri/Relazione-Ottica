@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.16)  22 JUN 2019 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.16)  22 JUN 2019 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1287,14 +1287,14 @@ Package pdftex.def Info: ./figs/double-rainbow.jpg  used on input line 70.
 [2
 
 ] [3 <./figs/double-rainbow.jpg>] [4]
-<./figs/wolfram.png, id=138, 592.46344pt x 470.50781pt>
+<./figs/wolfram.png, id=142, 592.46344pt x 470.50781pt>
 File: ./figs/wolfram.png Graphic file (type png)
 <use ./figs/wolfram.png>
 Package pdftex.def Info: ./figs/wolfram.png  used on input line 278.
 (pdftex.def)             Requested size: 426.79135pt x 338.95203pt.
  [5] [6 <./figs/wolfram.png>]
 Capitolo 2.
-<./figs/lunar-halo.jpg, id=164, 1204.5pt x 803.0pt>
+<./figs/lunar-halo.jpg, id=168, 1204.5pt x 803.0pt>
 File: ./figs/lunar-halo.jpg Graphic file (type jpg)
 <use ./figs/lunar-halo.jpg>
 Package pdftex.def Info: ./figs/lunar-halo.jpg  used on input line 292.
@@ -1315,10 +1315,10 @@ Package rerunfilecheck Info: File `"Relazione Ottica".out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 387.
  ) 
 Here is how much of TeX's memory you used:
- 42418 strings out of 492609
- 966633 string characters out of 6132818
+ 42422 strings out of 492609
+ 966677 string characters out of 6132818
  1157132 words of memory out of 5000000
- 45688 multiletter control sequences out of 15000+600000
+ 45689 multiletter control sequences out of 15000+600000
  542154 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,13n,98p,899b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1337,10 +1337,10 @@ exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2019
 sfonts/cm/cmsl10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
 b><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "Relazione Ottica.pdf" (11 pages, 538917 bytes).
+Output written on "Relazione Ottica.pdf" (11 pages, 543379 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
+ 278 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
  148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
