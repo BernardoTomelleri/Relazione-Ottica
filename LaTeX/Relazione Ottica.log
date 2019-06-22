@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.16)  22 JUN 2019 00:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.16)  22 JUN 2019 02:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1279,7 +1279,7 @@ l.66 \chapter
 
 ]
 Capitolo 1.
-<./figs/double-rainbow.jpg, id=87, 1304.875pt x 869.2475pt>
+<./figs/double-rainbow.jpg, id=92, 1304.875pt x 869.2475pt>
 File: ./figs/double-rainbow.jpg Graphic file (type jpg)
 <use ./figs/double-rainbow.jpg>
 Package pdftex.def Info: ./figs/double-rainbow.jpg  used on input line 73.
@@ -1287,38 +1287,38 @@ Package pdftex.def Info: ./figs/double-rainbow.jpg  used on input line 73.
 [2
 
 ] [3 <./figs/double-rainbow.jpg>] [4]
-<./figs/wolfram.png, id=128, 592.46344pt x 470.50781pt>
+<./figs/wolfram.png, id=133, 592.46344pt x 470.50781pt>
 File: ./figs/wolfram.png Graphic file (type png)
 <use ./figs/wolfram.png>
 Package pdftex.def Info: ./figs/wolfram.png  used on input line 281.
 (pdftex.def)             Requested size: 426.79135pt x 338.95203pt.
  [5] [6 <./figs/wolfram.png>]
 Capitolo 2.
-<./figs/lunar-halo.jpg, id=153, 1204.5pt x 803.0pt>
+<./figs/lunar-halo.jpg, id=159, 1204.5pt x 803.0pt>
 File: ./figs/lunar-halo.jpg Graphic file (type jpg)
 <use ./figs/lunar-halo.jpg>
-Package pdftex.def Info: ./figs/lunar-halo.jpg  used on input line 294.
+Package pdftex.def Info: ./figs/lunar-halo.jpg  used on input line 295.
 (pdftex.def)             Requested size: 426.79135pt x 284.534pt.
 [7
 
  <./figs/lunar-halo.jpg>] [8] (./Relazione Ottica.bbl [9]) [10
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 373.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 373.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 374.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 374.
 
 (./Relazione Ottica.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 373.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 373.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 374.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 374.
 Package rerunfilecheck Info: File `"Relazione Ottica".out' has not changed.
-(rerunfilecheck)             Checksum: 6805D4894339C48CC289D7FA91A85CBE;974.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 373.
+(rerunfilecheck)             Checksum: A8A615CA793B04800B6122BC682A1D24;1051.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 374.
  ) 
 Here is how much of TeX's memory you used:
- 42392 strings out of 492609
- 966196 string characters out of 6132818
- 1149130 words of memory out of 5000000
- 45670 multiletter control sequences out of 15000+600000
+ 42395 strings out of 492609
+ 966233 string characters out of 6132818
+ 1149131 words of memory out of 5000000
+ 45672 multiletter control sequences out of 15000+600000
  542154 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,13n,98p,929b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1337,10 +1337,10 @@ exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2019
 sfonts/cm/cmsl10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
 b><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "Relazione Ottica.pdf" (11 pages, 532409 bytes).
+Output written on "Relazione Ottica.pdf" (11 pages, 533398 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 132 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 263 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 
