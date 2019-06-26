@@ -40,7 +40,7 @@
 \pagestyle{fancy}
 %\lfoot{Università di Pisa}
 %\rfoot{Relazione finale di ottica} 
-\headheight 22.6 pt
+\setlength{\headheight}{26 pt}
 \begin{document}
 \begin{titlepage}
 	\begin{center}
@@ -59,8 +59,9 @@
 \restoregeometry
 \tableofcontents
 \emergencystretch = 22 pt
+\renewcommand{\chaptermark}[1]{\markboth{\arabic{chapter}.\ #1}{}}
 
-\chapter{Arcobaleno e Indice di rifrazione dell'Acqua}
+\chapter{Doppio Arcobaleno e Indice di rifrazione dell'Acqua}
 \section{Scopo dell'esperienza}
 Studiare il fenomeno dell'arcobaleno dal punto di vista dell'ottica geometrica, dunque ottenere una misura dell'indice di rifrazione dell'acqua da quanto trovato.
 \section{Apparato sperimentale e strumenti}
@@ -74,6 +75,7 @@ La strumentazione utilizzata si limita a una fotografia digitale ad alta risoluz
 
 \section{Cenni Teorici}
 Sappiamo di poter osservare l'arcobaleno guardando un banco di pioggia quando il sole alle nostre spalle non è alla sua massima altezza, la spiegazione del fenomeno è da ricercarsi in ciò che succede al livello microscopico nelle singole gocce d'acqua:
+
 \subsection{Deflessione nel caso di Luce incidente su una goccia d'acqua}
 Si consideri un fascio di luce che illumina una goccia d'acqua -perfettamente- sferica di raggio $R$ e con indice di rifrazione $n$: i raggi luminosi che incidono sulla sua superficie ad un angolo $i$ vengono rifratti in entrata e possono subire molteplici riflessioni all'interno di questa prima di uscirne nuovamente rifratti.
 Dunque chiamiamo angolo di \emph{diffusione} $\delta$ quello tra il raggio luminoso in entrata e il raggio in uscita. 
@@ -97,7 +99,7 @@ Dunque un angolo d'incidenza critico è dato da $\hat{i}_k$:
 \delta_k'(\hat{i}_k) &= 2\left(\frac{(k+1) \cos{\hat{i}_k}}{\sqrt{n^2 - \sin^2{\hat{i}_k}}} - 1 \right) = 0 \\
 \sin{\hat{i}_k} &= \sqrt{\frac{(k+1)^2 - n^2}{k(k+2)}} \Rightarrow \hat{i}_k = \arcsin{\sqrt{\frac{(k+1)^2 - n^2}{k(k+2)}}}
 \end{align}
-grazie all'identità fondamentale della trigonometria si arriva alla formula\footnote{\cite{Walker}} per gli angoli d'incidenza critici in funzione dei valori di $k$ e di $n$:
+grazie all'identità fondamentale della trigonometria si arriva alla formula \cite{Walker} per gli angoli d'incidenza critici in funzione dei valori di $k$ e $n$:
 \begin{equation}\label{eq:crit}
 i_k = \arccos\sqrt{\frac{n^2-1}{k(k+2)}}
 \end{equation}
@@ -198,7 +200,7 @@ n(\lambda) = n_0 + \frac{A}{\lambda^2}+ \cdots
 dove $A$ prende il nome di Coefficiente di Cauchy, è possibile darne una stima a partire dai valori di $n$ trovati distinguendo gli archi in base al colore delle bande.
 
 \section{Descrizione delle Misure}
-Abbiamo effettuato $3$ coppie di campionamenti per ottenere $3$ fit circolari indipendenti e, di conseguenza, tre stime del raggio $R$ così da avere una stima sull'incertezza dalla deviazione dal valore medio.
+Abbiamo effettuato $3$ coppie di campionamenti per ottenere $6$ fit circolari indipendenti e, di conseguenza, tre stime sia per il raggio primario $r$ che per il raggio secondario $R$, così da ottenere una stima sull'incertezza dalla deviazione dal valore medio.
 \begin{table}[!htb]
   \begin{center}
   \begin{large}
@@ -282,9 +284,11 @@ L'indice di rifrazione $n$ dell'acqua è vincolato a rispettare la seguente espr
 Da cui $n$ risulta pari a $1.333 \pm 0.001$ come ci aspettavamo dalla teoria.
 \section{Conclusioni}
 Si è data una misura dell'indice di rifrazione dell'acqua con incertezza relativa minore dello $0.1\%$, notevolmente più preciso del risultato trovato durante l'esperienza del diottro $(>2\%)$, questo si deve alla precisione del fit circolare e alla possibilità di abbassare l'errore sul valor medio ripetendo campionamenti e fit. 
-\chapter{Alone Lunare e Misura dell'indice di rifrazione del Ghiaccio}
+\chapter{Alone Lunare e Indice di rifrazione del Ghiaccio}
+\section{Scopo dell'esperienza}
+Spiegare e misurare l'ampiezza angolare dell'alone Lunare e da questa ricavare una stima dell'indice di rifrazione del ghiaccio.
 \section{Apparato sperimentale e strumenti}
-La strumentazione utilizzata si limita a una fotografia digitale del fenomeno trattato e di un software di elaborazione immagini\footnote{\cite{gimp}} dotato di uno strumento per campionare diversi punti e distanze tra questi, in base alle proprie coordinate in pixel.
+La strumentazione utilizzata si limita a una fotografia digitale del fenomeno trattato e di un software di elaborazione immagini\cite{gimp} dotato di uno strumento per campionare diversi punti e distanze tra questi, in base alle proprie coordinate in pixel.
 \section{Cenni Teorici}
 Talvolta intorno alla Luna e al Sole \`e possibile osservare aloni circolari.
 \begin{figure}[htb!]
@@ -292,13 +296,13 @@ Talvolta intorno alla Luna e al Sole \`e possibile osservare aloni circolari.
     \includegraphics[width=\linewidth]{./figs/lunar-halo.jpg}
   \caption{La fotografia del fenomeno usata per i campionamenti}
 \end{figure}
-Si osservi l'alone che circonda la Luna, l'allineamento lungo l'eclittica di Venere, Luna, Marte e Giove, e le tre stelle che fanno da sfondo al fenomeno: Spica (la pi\`u luminosa della Vergine), Arcturus e Regulus.\\
-L'alone \`e dovuto alla deflessione della Luce da parte di piccoli prismi esagonali (vapore acqueo ghiacciato presente nell'atmosfera). 
+Si osservi l'alone che circonda la Luna, l'allineamento lungo l'eclittica di Venere, Luna, Marte e Giove, e le tre stelle del triangolo primaverile che fanno da sfondo al fenomeno: Spica, Arcturus e Regulus.\\
+L'alone \`e dovuto alla deflessione della Luce da parte di piccoli prismi esagonali (vapore acqueo ghiacciato presente nell'atmosfera)
 L'angolo di deflessione $\delta$ di un raggio di luce per un prisma (con angolo al vertice $\phi = 60^\circ$ costituito di materiale con indice di rifrazione $n$) dipende dall'angolo d'incidenza $i$ secondo la relazione:
 \begin{equation}\label{eq:delta_ice}
 \delta = i - \phi + \arcsin{\left( \sin{\phi} \sqrt{n^2 - \sin{i}^2} - \sin{i} \cos{\phi} \right)}
 \end{equation}
-Si ha angolo di deflessione minimo $\delta_m$ quando il raggio rifratto si propaga parallelo alla base del prisma, dalla \eqref{eq:delta_ice} si trova minimo per un angolo d'incidenza:
+Si ha angolo minimo di deflessione $\delta_m$ quando il raggio rifratto si propaga parallelo alla base del prisma, dalla \eqref{eq:delta_ice} si trova minimo per un angolo d'incidenza:
 \begin{align}
 i_m &\approx 41 \; \si{\degree} \\
 \delta_m &\approx 22 \; \si{\degree}
@@ -309,12 +313,12 @@ come si può vedere dal grafico \ref{fig:delta_ice}.
 		\scalebox{0.8}{\input{./figs/delta_ice.pgf}}
 	\caption{Angolo di deflessione per un prisma esagonale di ghiaccio in funzione dell'angolo d'incidenza \label{fig:delta_ice}}
 \end{figure}
-L'angolo di deflessione minima soddisfa l'identità
+L'angolo di deflessione minimo soddisfa l'identità
 \begin{equation}\label{eq:prism}
 n = \frac{\sin\left(\frac{\delta_m + \phi}{2}\right)}{\sin (\phi/2)}
 \end{equation}
 Da cui è possibile ricavare una stima dell'indice di rifrazione del ghiaccio.
-%In certe circostanze \`e visibile anche un secondo alone a $46^\circ$
+%In certe circostanze \`e visibile anche un secondo alone a $46^\circ, dovuto a un'orientazione casuale delle facce dei prismi esagonali; L'alone di Scheiner ha apertura 28^\circ, è dovuto alla presenza di cristalli cubici di ghiaccio nell'alta atmosfera. Per prismi piramidali esistono coppie compatibili per $(n = 1.34, \phi = 56)$ (n=1.3, \phi = 62), (n=1.286, \phi = 63.8)
 \subsection{Legge di Gladstone-Dale}
 Sappiamo che gli indici di rifrazione di un mezzo in due diverse fasi di stato sono legati dalle loro densità $\rho$ secondo la Legge di Gladstone-Dale:
 \begin{equation}\label{eq:Glad}
@@ -325,9 +329,6 @@ Visto che le misure di indici proposte sono proprio dello stesso materiale nella
 La seguente tabella riporta i valori, in pixel, rilevati dai $4$ campionamenti effettuati, anche stavolta per ottenere $4$ fit circolari indipendenti e $4$ diverse misure del raggio da cui stimare la deviazione dal valore medio.
 \begin{table}[htb!]
   \begin{center}
-  \begin{large}
-  Alone Lunare
-  \end{large}\\
 	\begin{tabular}{cccccccc}
 	\toprule
 	$x_{(1)}$  & $y_{(1)}$  & $x_{(2)}$  & $y_{(2)}$  & $x_{(3)}$  & $y_{(3)}$ & $x_{(4)}$  & $y_{(4)}$ \\
@@ -359,16 +360,56 @@ La seguente tabella riporta i valori, in pixel, rilevati dai $4$ campionamenti e
 \end{table}
 
 \section{Analisi dei Dati}
-Eseguendo un \emph{fit circolare} all'alone, si determina il raggio in pixel che successivamente si pu\`o esprimere in gradi. Il fattore di conversione da pixel a gradi, (calibrazione) si determina consultando un catalogo stellare: \cite{stellarium} in cui siano riportate le coordinate delle tre stelle e tenendo conto che la distanza angolare tra una coppia di punti di coordinate sferiche ($\theta_1,\phi_1$) e ($\theta_2,\phi_2$) \`e data da:
+Si sono effettuati 4 \emph{fit circolari}, due per ciascuna banda di colore distinguibile all'interno dell'alone, così da poterne determinare il raggio $R_{px}$ in pixel, se ne riportano i risultati nella tabella \ref{tab:halofit}:
+\begin{table}[!htb]
+  \begin{center}
+	\begin{tabular}{cccc}
+	\toprule
+	Alone & $R_{px}$ & $x_{centro}$ & $y_{centro}$ \\
+	\midrule
+	\midrule
+	Verde(1) & 198.9 & 624.3 & 383.5 \\ 
+	Verde(2) & 197.7 & 624.1 & 383.2 \\ 
+	Rosso(1) & 196.4 & 623.8 & 383.9 \\ 
+	Rosso(2) & 192.4 & 622.6 & 382.4 \\ 
+	\bottomrule
+	\end{tabular}
+  \end{center}
+  \caption{Misure dell'alone lunare ottenute dai fit in pixel \label{tab:halofit}}
+\end{table}\\
+Per esprimere la misura del raggio in gradi è necessaria una stima del fattore di conversione $\gamma$ da pixel a gradi: fortunatamente la fotografia analizzata è stata scattata con un obiettivo che conserva le distanze angolari\footnote{fish-eye diagonale da $15 \; \si{\mm}$}, quindi le distanze note tra le stelle del triangolo primaverile sono direttamente proporzionali a quelle osservate sullo sfondo dell'immagine. Si è consultato un catalogo stellare \cite{stellarium} per le coordinate delle tre stelle: indicando con $\theta$ l'angolo polare e $\phi$ quello azimutale, se ne è calcolata la distanza angolare sapendo che, per una coppia di punti di coordinate sferiche ($\theta_1,\phi_1$) e ($\theta_2,\phi_2$), \`e data da:
 \begin{equation}\label{eq: sphere}
 \cos\alpha = \sin\theta_1\sin\theta_2 + \cos\theta_1\cos\theta_2 \: (\cos\phi_1 - \cos\phi_2)
 \end{equation}
-dove $\theta$ \`e l'angolo polare e $\phi$ \`e quello azimutale.
-Una volta determinato il raggio angolare dell'alone ($\approx 22^\circ$) si pu\`o ipotizzare che questo sia dovuto alla presenza nell'atmosfera di prismi esagonali di ghiaccio orientati a caso. Dunque è possibile stimare l'indice di rifrazione del ghiaccio dall'ampiezza angolare dell'alone. Questa coincide infatti con l'angolo $\delta_m$ di deflessione dovuto ai prismi di ghiaccio. Da \eqref{eq:prism} si ricava la nostra misura dell'indice di rifrazione del ghiaccio:
-\begin{equation}\label{eq: refr_ice}
-n = 2 \sin{\left(\frac{22^\circ + 60^\circ}{2}\right)} = 1.310 \pm 0.004
+Per la calibrazione si è misurata la distanza $d$ tra Arcturus e Spica, pari a $295 \pm 1 \; \rm pixel$, quindi per \eqref{eq: sphere} si ottiene una distanza angolare $\alpha = 32.8 \si{\degree}$, da cui abbiamo ricavato il fattore di conversione $\gamma$
+\begin{equation}\label{eq:conversion}
+\gamma = \frac{\alpha}{d} = 0.1112 \pm 0.0004
 \end{equation}
-
+Finalmente si riporta la misura del raggio $R$ dell'alone lunare
+\begin{align}
+R_{\rm px} &= 196 \pm 3 \; \rm pixel \\
+R &= \gamma R_{\rm px} = 21.8 \pm 0.3 \; \si{\degree}
+\end{align}
+Il che risulta compatibile con la nota ampiezza angolare di circa $22 \si{\degree}$ che ci aspettavamo.
+%Una volta determinato il raggio angolare dell'alone ($\approx 22^\circ$) si pu\`o ipotizzare che questo sia dovuto alla presenza nell'atmosfera di prismi esagonali di ghiaccio orientati a caso.
+Analogamente a quanto visto nel caso dell'arcobaleno, l'ampiezza angolare dell'alone coincide con l'angolo $\delta_m$ di deflessione dovuto ai prismi di ghiaccio presenti nell'atmosfera, da \eqref{eq:prism} si ricava la nostra misura dell'indice di rifrazione del ghiaccio:
+\begin{equation}\label{eq: refr_ice}
+n = 2 \sin{\left(\frac{R + \frac{\pi}{3}}{2}\right)} = 1.310 \pm 0.004
+\end{equation}
+\subsection{Gladstone Dale}
+Si è assunto come valore di riferimento per la densità dell'acqua $\rho = 0.997 \pm 0.001 \; \si{\g/\cm^3}$.
+Per cui la nostra stima per la costante di Gladstone-Dale
+\begin{equation}
+k = \frac{n-1}{\rho} = 0.335 \pm \sigma
+\end{equation}
+risulta compatibile con quanto osservato \cite{Gladstone} per luce d'ampiezza $\lambda = 546 \si{\micro \metre}$ a $25 \si{\degree}$ Celsius, ovverosia $\bar{k} = 0.335$.
+Dunque si può dare una stima della densità del ghiaccio invertendo la legge \eqref{eq:Glad}:
+\begin{equation}\label{eq:rho_ice}
+\rho = \frac{n-1}{k} = 0.92 \pm \sigma \; \si{\g/\cm^3} 
+\end{equation}
+compatibile entro l'errore sperimentale con il valore osservato \cite{ice} $\rho_{ice} = 0.9168 \si{\g/\cm^3}$ per il ghiaccio.
+\section{Conclusioni}
+L'ipotesi di cristalli esagonali come causa del fenomeno dell'alone lunare risulta plausibile, inoltre si sono misurati l'indice di rifrazione e la densità del ghiaccio con incertezze relative dell'$1\%$ circa.
 %\chapter{Esperienze di Laboratorio}
 %\title{Misura di Indici di Rifrazione}
 %\author{Bernardo Tomelleri, Marco Romagnoli}

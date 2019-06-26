@@ -43,4 +43,13 @@ N.~Krina. (2019, 04-29) Sky map online. [Online]. Available:
   \url{http://kosmoved.ru/nebo_segodnya_geo.php?lang=eng&m=sky-map-online}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Gladstone}
+J.~S. Rosen, ``The refractive indices of alcohol, water, and their mixtures at
+  high pressures,'' \emph{Journal of the Optical Society of America}, vol.~37,
+  no.~11, pp. 932 -- 938, 06 1947.
+
+\bibitem{ice}
+K.~F. Voitkovskii, ``The mechanical properties of ice (mekhanicheskie svoistva
+  l'da),'' p. 100 pp., 1960.
+
 \end{thebibliography}
