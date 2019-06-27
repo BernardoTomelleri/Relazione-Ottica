@@ -23,33 +23,27 @@
 
 \bibitem{gimp}
 \BIBentryALTinterwordspacing
-S.~Kimball, P.~Mattis \emph{et~al.} (2019, 05-04) Gnu image manipulation
-  program. [Online]. Available: \url{https://www.gimp.org/}
+S.~Kimball, P.~Mattis \emph{et~al.} (2019, May) Gnu image manipulation program.
+  [Online]. Available: \url{https://www.gimp.org/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Walker}
 J.~Walker, ``Multiple rainbows from single drops of water and other liquids,''
-  \emph{American Journal of Physics - AMER J PHYS}, vol.~44, no.~5, 01 1976.
-
-\bibitem{wolfram}
-\BIBentryALTinterwordspacing
-S.~Wolfram. (2019, 06-05) Wolfram{$\vert$}alpha: Computational intelligence.
-  [Online]. Available: \url{http://www.wolframalpha.com}
-\BIBentrySTDinterwordspacing
+  \emph{American Journal of Physics}, vol.~44, no.~5, Jan. 1976.
 
 \bibitem{stellarium}
 \BIBentryALTinterwordspacing
-N.~Krina. (2019, 04-29) Sky map online. [Online]. Available:
+N.~Krina. (2019, Apr.) Sky map online. [Online]. Available:
   \url{http://kosmoved.ru/nebo_segodnya_geo.php?lang=eng&m=sky-map-online}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Gladstone}
 J.~S. Rosen, ``The refractive indices of alcohol, water, and their mixtures at
   high pressures,'' \emph{Journal of the Optical Society of America}, vol.~37,
-  no.~11, pp. 932 -- 938, 06 1947.
+  no.~11, pp. 932 -- 938, Jun. 1947.
 
 \bibitem{ice}
 K.~F. Voitkovskii, ``The mechanical properties of ice (mekhanicheskie svoistva
-  l'da),'' p. 100 pp., 1960.
+  l'da),'' \emph{Gidrokhimicheskie Materialy}, 1960.
 
 \end{thebibliography}

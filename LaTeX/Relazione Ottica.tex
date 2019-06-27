@@ -34,7 +34,7 @@
 }
 \geometry{a4paper, left=30mm, right=30mm, top=30mm, bottom=30mm}
 \title{Relazione finale Ottica}
-\author{Bernardo Tomelleri, Marco Romagnoli}
+\author{Bernardo Tomelleri, Marco Romagnoli, Maurizio Luca Emanuele Camplese}
 \date{19/04/2019}
 
 \pagestyle{fancy}
@@ -51,6 +51,8 @@
 		& b.tomelleri@studenti.unipi.it\\ \\
 		& Marco Romagnoli ($578061$) \\
 		& m.romagnoli@studenti.unipi.it \\ \\
+		& Maurizio L. E. Camplese ($579117$) \\
+		& m.camplese@studenti.unipi.it \\ \\
 		\end{tabular}\\\vspace*{5mm}
 		{\thedate}
 	\end{center}
@@ -276,10 +278,9 @@ L'indice di rifrazione $n$ dell'acqua è vincolato a rispettare la seguente espr
 \frac{\pi + 2\arcsin\left(\frac{\sqrt{9-x^2}}{2\sqrt{2}}\right) - 6\arcsin\left(\frac{\sqrt{9-x^2}}{2\sqrt{2}x}\right)}{4\arcsin\left(\frac{\sqrt{4-x^2}}{x\sqrt{3}}\right) - 2\arcsin\left(\frac{\sqrt{4-x^2}}{\sqrt{3}}\right)} -1.213 = 0
 \end{equation}
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=\textwidth]{./figs/wolfram.png}
-  \end{center}
-  \caption{Soluzione grafica ottenuta da Wolfram Alpha \cite{wolfram}}
+	\centering
+		\scalebox{0.8}{\input{./figs/ratio.pgf}}
+	\caption{Grafico e soluzione dell'espressione \eqref{eq: radii} per l'indice di rifrazione \label{fig:ratio}}
 \end{figure}
 Da cui $n$ risulta pari a $1.333 \pm 0.001$ come ci aspettavamo dalla teoria.
 \section{Conclusioni}
@@ -400,12 +401,12 @@ n = 2 \sin{\left(\frac{R + \frac{\pi}{3}}{2}\right)} = 1.310 \pm 0.004
 Si è assunto come valore di riferimento per la densità dell'acqua $\rho = 0.997 \pm 0.001 \; \si{\g/\cm^3}$.
 Per cui la nostra stima per la costante di Gladstone-Dale
 \begin{equation}
-k = \frac{n-1}{\rho} = 0.335 \pm \sigma
+k = \frac{n-1}{\rho} = 0.335 \pm 0.001
 \end{equation}
 risulta compatibile con quanto osservato \cite{Gladstone} per luce d'ampiezza $\lambda = 546 \si{\micro \metre}$ a $25 \si{\degree}$ Celsius, ovverosia $\bar{k} = 0.335$.
 Dunque si può dare una stima della densità del ghiaccio invertendo la legge \eqref{eq:Glad}:
 \begin{equation}\label{eq:rho_ice}
-\rho = \frac{n-1}{k} = 0.92 \pm \sigma \; \si{\g/\cm^3} 
+\rho = \frac{n-1}{k} = 0.92 \pm 0.01 \; \si{\g/\cm^3} 
 \end{equation}
 compatibile entro l'errore sperimentale con il valore osservato \cite{ice} $\rho_{ice} = 0.9168 \si{\g/\cm^3}$ per il ghiaccio.
 \section{Conclusioni}
@@ -422,7 +423,7 @@ L'ipotesi di cristalli esagonali come causa del fenomeno dell'alone lunare risul
 %\input{Focali.tex}
 
 \medskip
-\bibliographystyle{IEEEtran}
+\bibliographystyle{IEEEtrandoi}
 \bibliography{refs}
 
 \end{document}
