@@ -9,8 +9,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 from scipy.optimize import curve_fit
 #Dati ingresso
-n=np.array([1.3326, 1.334, 1.339])
-dn=np.array([0.002, 0.002, 0.002])
+n=np.array([1.331, 1.333, 1.337])
+dn=np.array([0.001, 0.001, 0.001])
 l=np.array([0.65, 0.55, 0.45])
 dl=np.full(len(l), 0.005)
 ll = np.linspace(min(l)-0.2, max(l)+0.1, 100)
@@ -19,7 +19,7 @@ ll = np.linspace(min(l)-0.2, max(l)+0.1, 100)
 def cauchy(l, A, n_0):
     return n_0 + A/(l**2)
 
-popt, pcov = curve_fit(cauchy, l, n, np.array([0.004, 1.33]), dn, absolute_sigma = True)
+popt, pcov = curve_fit(cauchy, l, n, np.array([0.004, 1.319]), dn, absolute_sigma = True)
 A_fit, n_0_fit = popt
 dA_fit, dn_0_fit = np.sqrt(pcov.diagonal())
 print('A = %f +- %f' % (A_fit, dA_fit))
