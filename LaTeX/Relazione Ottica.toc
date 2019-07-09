@@ -18,3 +18,16 @@
 \contentsline {section}{\numberline {2.5}Analisi dei Dati}{9}{section.2.5}% 
 \contentsline {subsection}{\numberline {2.5.1}Gladstone Dale}{10}{subsection.2.5.1}% 
 \contentsline {section}{\numberline {2.6}Conclusioni}{10}{section.2.6}% 
+\contentsline {chapter}{\numberline {3}Esperienze di Laboratorio}{11}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Scopo dell'esperienza}{1}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Apparato sperimentale e strumenti}{1}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Cenni Teorici}{1}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Descrizione delle Misure}{2}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}Analisi dei Dati}{3}{section.3.5}% 
+\contentsline {section}{\numberline {3.6}Conclusioni}{5}{section.3.6}% 
+\contentsline {section}{\numberline {3.7}Scopo dell'esperienza}{1}{section.3.7}% 
+\contentsline {section}{\numberline {3.8}Apparato sperimentale e strumenti}{1}{section.3.8}% 
+\contentsline {section}{\numberline {3.9}Cenni Teorici}{1}{section.3.9}% 
+\contentsline {section}{\numberline {3.10}Descrizione delle misure}{1}{section.3.10}% 
+\contentsline {section}{\numberline {3.11}Analisi dei Dati}{2}{section.3.11}% 
+\contentsline {section}{\numberline {3.12}Conclusioni}{5}{section.3.12}% 

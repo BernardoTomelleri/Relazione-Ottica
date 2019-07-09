@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.16)  4 JUL 2019 19:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.16)  8 JUL 2019 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1057,7 +1057,11 @@ File: babel.def 2019/06/03 3.32 Babel common definitions
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count333
 )
-(./Relazione Ottica.aux)
+(./Relazione Ottica.aux
+
+LaTeX Warning: Label `eq:chi_eff' multiply defined.
+
+)
 \openout1 = `"Relazione Ottica.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -1074,8 +1078,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
-
-(c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count334
 \scratchdimen=\dimen325
@@ -1279,7 +1282,7 @@ l.66 \chapter
 
 ]
 Capitolo 1.
-<./figs/double-rainbow.jpg, id=112, 1304.875pt x 869.2475pt>
+<./figs/double-rainbow.jpg, id=178, 1304.875pt x 869.2475pt>
 File: ./figs/double-rainbow.jpg Graphic file (type jpg)
 <use ./figs/double-rainbow.jpg>
 Package pdftex.def Info: ./figs/double-rainbow.jpg  used on input line 73.
@@ -1288,7 +1291,7 @@ Package pdftex.def Info: ./figs/double-rainbow.jpg  used on input line 73.
 
 ] [3 <./figs/double-rainbow.jpg>] [4] (./figs/ratio.pgf) [5] [6]
 Capitolo 2.
-<./figs/lunar-halo.jpg, id=178, 1204.5pt x 803.0pt>
+<./figs/lunar-halo.jpg, id=243, 1204.5pt x 803.0pt>
 File: ./figs/lunar-halo.jpg Graphic file (type jpg)
 <use ./figs/lunar-halo.jpg>
 Package pdftex.def Info: ./figs/lunar-halo.jpg  used on input line 297.
@@ -1301,33 +1304,124 @@ LaTeX Font Info:    Try loading font information for TS1+cmr on input line 406.
 
 (c:/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) (./Relazione Ottica.bbl
-[10]
+) [10]
+Capitolo 3.
+(./Rifrazione.tex [11
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 \end{titlepage}
+                     [1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 23.
+ (c:/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.109 \section
+              {Descrizione delle Misure} [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.166 \end{equation*}
+                      [2] (./figs/plex_snell.pgf) (./figs/rifrazione_acqua.pgf)
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.204 \end{align*}
+                   [3]pdfTeX warning (ext4): destination with the same identifi
+er (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.204 \end{align*}
+                   [4]) (./Focali.texpdfTeX warning (ext4): destination with th
+e same identifier (name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 \begin{titlepage}
+                      [5]pdfTeX warning (ext4): destination with the same ident
+ifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 \end{titlepage}
+                     [1]
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.146 \subsection
+                 *{Lente Divergente} [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.180 \end{equation}
+                     [2] (./figs/conv_50mm.pgf) (./figs/conv_100mm.pgf)
+(./figs/div_200mm.pgf)pdfTeX warning (ext4): destination with the same identifi
+er (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.228 \section
+              {Conclusioni} [3]pdfTeX warning (ext4): destination with the same
+ identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \subsection
+                 *{Lente Divergente} [4]) (./Relazione Ottica.bblpdfTeX warning
+ (ext4): destination with the same identifier (name{page.5}) has been already u
+sed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2 \begin{thebibliography}{1}
+                               [5]
 Underfull \hbox (badness 1275) in paragraph at lines 46--48
 []\OT1/cmr/m/n/10 K. F. Voi-t-ko-v-skii, ``The me-cha-ni-cal pro-per-ties of ic
 e (me-kha-ni-che-skie svoist-va l'da),''
  []
 
-) [11
+)pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.428 \end{document}
+                     [6
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 429.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 429.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 428.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 428.
  (./Relazione Ottica.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 429.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 429.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 428.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 428.
 Package rerunfilecheck Info: File `"Relazione Ottica".out' has not changed.
-(rerunfilecheck)             Checksum: 6AE63A2702B66259C588876168ED53DD;1317.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 429.
+(rerunfilecheck)             Checksum: D2F3EC50A4CD6DD65A65B76B92EB3824;2181.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 428.
  ) 
 Here is how much of TeX's memory you used:
- 42464 strings out of 492609
- 967786 string characters out of 6132818
- 1165132 words of memory out of 5000000
- 45715 multiletter control sequences out of 15000+600000
+ 42711 strings out of 492609
+ 971892 string characters out of 6132818
+ 1360201 words of memory out of 5000000
+ 45887 multiletter control sequences out of 15000+600000
  543167 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,13n,98p,899b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,18n,98p,899b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2019
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2019/texmf-di
@@ -1345,10 +1439,10 @@ amsfonts/cm/cmr8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
 fb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/tex
 live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2019
 /texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "Relazione Ottica.pdf" (12 pages, 535207 bytes).
+Output written on "Relazione Ottica.pdf" (25 pages, 599279 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 275 compressed objects within 3 object streams
- 75 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 476 PDF objects out of 1000 (max. 8388607)
+ 423 compressed objects within 5 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 271 words of extra memory for PDF output out of 10000 (max. 10000000)
 
