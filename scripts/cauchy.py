@@ -8,12 +8,13 @@ import numpy as np
 from matplotlib import pyplot as plt
 from scipy.optimize import curve_fit
 #Dati ingresso
-n=np.array([1.3326, 1.334, 1.339])
+n=np.array([1.331, 1.335, 1.343])
 dn=np.array([0.002, 0.002, 0.002])
-l=np.array([0.65, 0.55, 0.45])
+l=np.array([0.63, 0.57, 0.45])
 dl=np.full(len(l), 0.005)
 ll = np.linspace(min(l)-0.2, max(l)+0.1, 100)
-n_0 = 1.32
+n_0 = 1.3175
+#n_0 = 1.318+-0.005
 # Fit con Cauchy
 def cauchy(l, A):
     return n_0 + A/(l**2)
@@ -40,8 +41,8 @@ ax1.errorbar(l, n, dn, dl, 'ko', elinewidth = 1., capsize=1., ms=1., linestyle='
 ax1.plot(ll, cauchy(ll, A_fit), label='fit', zorder=10)
 ax1.xaxis.set_major_locator(plt.MultipleLocator(0.05))
 ax1.xaxis.set_minor_locator(plt.MultipleLocator(0.01))
-ax1.yaxis.set_major_locator(plt.MultipleLocator(0.005))
-ax1.yaxis.set_minor_locator(plt.MultipleLocator(0.001))
+ax1.yaxis.set_major_locator(plt.MultipleLocator(0.01))
+ax1.yaxis.set_minor_locator(plt.MultipleLocator(0.002))
 ax1.tick_params(direction='in', length=5, width=1., top=True, right=True)
 ax1.tick_params(which='minor', direction='in', width=1., top=True, right=True)
 legend = ax1.legend(loc ='best')

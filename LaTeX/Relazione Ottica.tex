@@ -88,7 +88,7 @@ Per la legge di \emph{Snell-Cartesio} si ha sempre:
 \begin{equation}\label{eq:snell}
 b = \sin{i} = n \sin{r}
 \end{equation}
-Dal sistema formato dalle equazioni \eqref{eq:snell} e \eqref{eq: k_defl} si ottiene un'espressione in $i$ per l'angolo di diffusione $\delta_k = \pi - \theta_k$
+Dal sistema formato dalle equazioni \eqref{eq:snell} e \eqref{eq: k_defl} si ottiene un'espressione in $i$ per l'apertura angolare $\delta_k = \pi - \theta_k$
 \begin{equation}\label{eq: defl(iota)}
 \delta_k(i) = 2\left( (k+1)\arcsin \left(\frac{\sin{i}}{n}\right) -i \right)
 \end{equation}
@@ -283,6 +283,20 @@ L'indice di rifrazione $n$ dell'acqua è vincolato a rispettare la seguente espr
 	\caption{Grafico e soluzione dell'espressione \eqref{eq: radii} per l'indice di rifrazione \label{fig:ratio}}
 \end{figure}
 Da cui $n$ risulta pari a $1.333 \pm 0.001$ come ci aspettavamo dalla teoria.
+\subsection{Legge di Cauchy}
+Per stimare il coefficiente $A$ della legge di Cauchy \ref{eq:Cauchy} si è ripetuto lo stesso fit distinguendo nei rapporti dei raggi le bande del medesimo colore:
+\begin{figure}[H]
+	\centering
+		\scalebox{0.8}{\input{./figs/cauchy.pgf}}
+	\caption{Fit con la legge di Cauchy \label{fig:cauchy}}
+\end{figure}
+da cui si trovano i valori
+\begin{align}\label{aln:cauchy}
+n_0 &= 1.318 \pm 0.005 \\
+A &= 5.3 \pm 0.3 \; \times 10^{-3} \\
+\chi^2 &= 0.5/2
+\end{align}
+Questi risultano compatibili con quanto trovato da \cite{cauchy}. 
 \section{Conclusioni}
 Si è data una misura dell'indice di rifrazione dell'acqua con incertezza relativa minore dello $0.1\%$, compatibile con il risultato trovato durante l'esperienza del diottro, ma notevolmente più preciso rispetto a quest'ultimo $(>2\%)$, ciò si deve alla precisione del fit circolare e alla possibilità di abbassare l'errore sul valor medio ripetendo campionamenti e fit. 
 \chapter{Alone Lunare e Indice di rifrazione del Ghiaccio}
@@ -301,7 +315,7 @@ Si osservi l'alone che circonda la Luna, l'allineamento lungo l'eclittica di Ven
 L'alone \`e dovuto alla deflessione della Luce da parte di piccoli prismi esagonali (vapore acqueo ghiacciato presente nell'atmosfera)
 L'angolo di deflessione $\delta$ di un raggio di luce per un prisma (con angolo al vertice $\phi = 60^\circ$ costituito di materiale con indice di rifrazione $n$) dipende dall'angolo d'incidenza $i$ secondo la relazione:
 \begin{equation}\label{eq:delta_ice}
-\delta = i - \phi + \arcsin{\left( \sin{\phi} \sqrt{n^2 - \sin{i}^2} - \sin{i} \cos{\phi} \right)}
+\delta = i - \phi + \arcsin{\left( \sin{\phi} \sqrt{n^2 - \sin{i}} - \sin^2{i} \cos{\phi} \right)}
 \end{equation}
 Si ha angolo minimo di deflessione $\delta_m$ quando il raggio rifratto si propaga parallelo alla base del prisma, dalla \eqref{eq:delta_ice} si trova minimo per un angolo d'incidenza:
 \begin{align}
@@ -319,7 +333,7 @@ L'angolo di deflessione minimo soddisfa l'identità
 n = \frac{\sin\left(\frac{\delta_m + \phi}{2}\right)}{\sin (\phi/2)}
 \end{equation}
 Da cui è possibile ricavare una stima dell'indice di rifrazione del ghiaccio.
-%In certe circostanze \`e visibile anche un secondo alone a $46^\circ, dovuto a un'orientazione casuale delle facce dei prismi esagonali; L'alone di Scheiner ha apertura 28^\circ, è dovuto alla presenza di cristalli cubici di ghiaccio nell'alta atmosfera. Per prismi piramidali esistono coppie compatibili per $(n = 1.34, \phi = 56)$ (n=1.3, \phi = 62), (n=1.286, \phi = 63.8)
+%In certe circostanze \`e visibile anche un secondo alone a $46^\circ, dovuto a un'orientazione casuale delle facce dei prismi esagonali; L'alone di Scheiner ha apertura 28^\circ, è dovuto alla presenza di cristalli cubici di ghiaccio nell'alta atmosfera, la cui struttura viene detta ice$_c$. Per prismi piramidali esistono coppie compatibili per $(n = 1.34, \phi = 56)$ (n=1.3, \phi = 62), (n=1.286, \phi = 63.8)
 \subsection{Legge di Gladstone-Dale}
 Sappiamo che gli indici di rifrazione di un mezzo in due diverse fasi di stato sono legati dalle loro densità $\rho$ secondo la Legge di Gladstone-Dale:
 \begin{equation}\label{eq:Glad}
@@ -380,7 +394,7 @@ Si sono effettuati 4 \emph{fit circolari}, due per ciascuna banda di colore dist
 \end{table}\\
 Per esprimere la misura del raggio in gradi è necessaria una stima del fattore di conversione $\gamma$ da pixel a gradi: fortunatamente la fotografia analizzata è stata scattata con un obiettivo che conserva le distanze angolari\footnote{fish-eye diagonale da $15 \; \si{\mm}$}, quindi le distanze note tra le stelle del triangolo primaverile sono direttamente proporzionali a quelle osservate sullo sfondo dell'immagine. Si è consultato un catalogo stellare \cite{stellarium} per le coordinate delle tre stelle: indicando con $\theta$ l'angolo polare e $\phi$ quello azimutale, se ne è calcolata la distanza angolare sapendo che, per una coppia di punti di coordinate sferiche ($\theta_1,\phi_1$) e ($\theta_2,\phi_2$), \`e data da:
 \begin{equation}\label{eq: sphere}
-\cos\alpha = \sin\theta_1\sin\theta_2 + \cos\theta_1\cos\theta_2 \: (\cos\phi_1 - \cos\phi_2)
+\cos\alpha = \sin\theta_1\sin\theta_2 + \cos\theta_1\cos\theta_2 \cos{(\phi_1 - \phi_2)}
 \end{equation}
 Per la calibrazione si è misurata la distanza $d$ tra Arcturus e Spica, pari a $295 \pm 1 \; \rm pixel$, quindi per \eqref{eq: sphere} si ottiene una distanza angolare $\alpha = 32.8 \si{\degree}$, da cui abbiamo ricavato il fattore di conversione $\gamma$
 \begin{equation}\label{eq:conversion}

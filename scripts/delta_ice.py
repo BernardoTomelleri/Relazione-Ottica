@@ -15,6 +15,7 @@ def diffusion(i):
     return (i -phi + np.arcsin(np.sin(phi)*np.sqrt(n**2 - np.sin(i)**2) - np.cos(phi)*np.sin(i)))*deg
 
 y=diffusion(x)
+print(np.amin(diffusion(x)))
 plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
 fig, ax = plt.subplots()
